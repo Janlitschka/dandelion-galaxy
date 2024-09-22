@@ -66,6 +66,7 @@ ap_engineered_evolution = {
 		is_cyborg_empire = no
 		is_natural_design_empire = no
 		NOT = { has_valid_civic = civic_augmentation_bazaars }
+		dd_can_be_genetist_empire = yes
 	}
 
 	ai_weight = {
@@ -126,6 +127,7 @@ ap_the_flesh_is_weak = {
 		is_gestalt = no
 		is_individual_machine = no
 		is_natural_design_empire = no
+		dd_can_be_cyborg_empire = yes
 	}
 
 	ai_weight = {
@@ -167,6 +169,7 @@ ap_organo_machine_interfacing = {
 		}
 		is_hive_empire = yes
 		is_natural_design_empire = no
+		dd_can_be_cyborg_hive_empire = yes
 	}
 
 	ai_weight = {
@@ -203,6 +206,7 @@ ap_organo_machine_interfacing_assimilator = {
 			has_ascension_perk = ap_organo_machine_interfacing_assimilator
 		}
 		has_civic = civic_machine_assimilator
+		dd_can_be_cyborg_machine_empire = yes
 	}
 
 	ai_weight = {
@@ -362,6 +366,7 @@ ap_mind_over_matter = {
 		is_natural_design_empire = no
 		is_individual_machine = no
 		NOT = { has_valid_civic = civic_augmentation_bazaars }
+		dd_can_be_psionic_empire = yes
 	}
 
 	ai_weight = {
