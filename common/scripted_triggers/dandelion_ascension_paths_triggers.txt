@@ -1,0 +1,5 @@
+# dd - shortcut for DanDelion
+dd_can_be_psionic_empire = {}
+dd_can_be_genetist_empire = {}
+dd_can_be_cyborg_empire = {}
+dd_can_be_synth_empire = {}
