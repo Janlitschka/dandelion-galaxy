@@ -1,0 +1,16 @@
+namespace = dandelion_start
+event = {
+	id = dandelion_start.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = dandelion_active
+				}
+			}
+			set_global_flag = dandelion_active
+		}
+	}
+}
