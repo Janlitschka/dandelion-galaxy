@@ -1,0 +1,163 @@
+ralis_seddom = {
+	name = "Seddom"
+	class = "sc_black_hole"
+	flags = { seddom_system }
+	
+	max_instances = 1
+	primitive_system = no
+
+	planet = {
+		class = pc_black_hole
+		orbit_distance = 0
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		init_effect = {
+			create_ambient_object = {
+				type = "extradimensional_2"
+				location = this
+				use_3d_location = yes
+				entity_offset = { min = 6 max = 6 }
+				entity_offset_angle = { min = 90 max = 90 }
+				entity_offset_height = { min = -10 max = 0 }
+				scale = 0.25
+			}
+			last_created_ambient_object = {
+				set_ambient_object_flag = breachsealer_breach
+			}
+		}
+	}
+	init_effect = {
+		spawn_megastructure = {
+			type = "crisis_sphere_ruined"
+		}
+	}
+	planet = {
+		count = 1
+		class = pc_black_hole
+		class = pc_shrouded
+		orbit_distance = { min = 25 max = 45 }
+		orbit_angle = { min = 0 max = 180 }
+		size = 19
+
+		moon = {
+			count = 1
+			orbit_distance = 10
+			size = 10
+			class = pc_shrouded
+		}
+	}
+	planet = {
+		count = { min = 3 max = 6 }					# [Default = 1] If you use 'count = { min = x max = y }' then a random number of planets (between x & y) will be created
+		# name = "Example Planet"			# [Optional; default/blank = random name] Localization string for this system/its main star
+		class = pc_black_hole					# Picks a star class which matches the system's class (defined above)
+		class = pc_shrouded			# Define a specific planet class, e.g. 'pc_barren'
+		
+		# NOTE: the results of randomized settings like "class = random" depend on settings for each star class (see 'common/star_classes/'). For example: if you try to use 'random_colonizable' for a planet very close to the sun, the choice will fail for most star classes. Such failure is treated as though you scripted "class = none", i.e. the planet will not be initialized. Start the game with the '-script_debug' shortcut parameter to receive error logs whenever this occurs.
+
+		# 'orbit_distance' and 'orbit_angle' combine to set the polar coordinate of a given planet:
+		orbit_distance = { min = 50 max = 90 }	# Distance from the center of the system, relative to the previous planet's orbit (e.g. if the previous planet was placed at distance 100 from the center, "orbit_distance = 10" would put us 110 units from the center)
+		orbit_angle = { min = 0 max = 360 }					# Orbit angle from previous planet, in degrees
+		size = { min = 17 max = 32 }					# Planet size
+		has_ring = no					# [yes/no]		
+		has_independent_orbital_line = yes	# [yes/no] Makes the visible orbital line exist independently from the planet, so that even if the planet is destroyed its orbital line will remain
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+}
+example_initializer = {
+	name = "Example System"				# [Optional; default/blank = random name] Localization string for this system/its main star
+	class = "rl_standard_stars"			# System's star class: may be a specific class (e.g. 'sc_binary_10') or a random class from a list (e.g. 'rl_standard_stars')
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 60						# Distance from the solar system's center
+	}
+	flags = { example_system }			# Flags that may be referenced in triggers and effects ('has_star_flag')
+
+	max_instances = 1
+	### SETTINGS
+	primitive_system = no			# [default = no] Sets this initializer to appear more or less often depending on the 'Pre-FTL Civilizations' galaxy setting
+	# prevent_anomalies = yes			# [default = no] Prevents generic anomalies from spawning inside this system
+
+	### INITIALIZER EFFECT
+	# Called once all planets have been created and the system is initialized:
+	# this = galactic_object scope; root = first system in this initializer tree (if any); prev = previous system in this tree (if any)
+	# init_effect = {
+	# 	set_name = "Name set from an effect"
+	# }
+
+	### STARS & PLANETS
+	# Stars are initialized as planets and then classified as stars:
+	planet = {
+		class = pc_black_hole
+		orbit_distance = 0
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		init_effect = {
+			spawn_megastructure = {
+				type = "crisis_sphere_ruined"
+			}
+		}
+	}
+	planet = {
+		class = pc_rift_star
+		orbit_distance = 0
+		size = 12
+		has_ring = no
+	}
+
+	# Create a planet:
+	planet = {
+		count = { min = 3 max = 6 }					# [Default = 1] If you use 'count = { min = x max = y }' then a random number of planets (between x & y) will be created
+		# name = "Example Planet"			# [Optional; default/blank = random name] Localization string for this system/its main star
+		class = pc_black_hole					# Picks a star class which matches the system's class (defined above)
+		class = pc_shrouded			# Define a specific planet class, e.g. 'pc_barren'
+		
+		# NOTE: the results of randomized settings like "class = random" depend on settings for each star class (see 'common/star_classes/'). For example: if you try to use 'random_colonizable' for a planet very close to the sun, the choice will fail for most star classes. Such failure is treated as though you scripted "class = none", i.e. the planet will not be initialized. Start the game with the '-script_debug' shortcut parameter to receive error logs whenever this occurs.
+
+		# 'orbit_distance' and 'orbit_angle' combine to set the polar coordinate of a given planet:
+		orbit_distance = { min = 20 max = 90 }	# Distance from the center of the system, relative to the previous planet's orbit (e.g. if the previous planet was placed at distance 100 from the center, "orbit_distance = 10" would put us 110 units from the center)
+		orbit_angle = 1					# Orbit angle from previous planet, in degrees
+		size = { min = 17 max = 32 }					# Planet size
+		has_ring = no					# [yes/no]		
+		has_independent_orbital_line = yes	# [yes/no] Makes the visible orbital line exist independently from the planet, so that even if the planet is destroyed its orbital line will remain
+
+		#modifier = "pm_dangerous_wildlife"	# ID for a planet modifier you wish to apply
+		#anomaly = "IRASSIA"				# ID for an Anomaly you wish to apply on this planet
+
+		#home_planet = yes				# [yes/no] Is this is a valid home planet for empires and fallen empires?
+
+		#flags = { example_planet }		# Flags that may be referenced in triggers and effects ('has_planet_flag')
+
+		# Moons are functionally identical to planets, except they orbit the parent planet instead of the system center:
+		# moon = {
+		# 	class = random
+		# 	orbit_distance = 10			# Relative to the host planet and its other moons
+		# 	size = 1
+		# }
+		# Multiple moons may be spawned in sequence, as follows:
+		# moon = {
+		# 	count = { min = 1 max = 3 }
+		# 	orbit_distance = 2.5
+		# 	size = 1
+		# }
+
+		# Called once the planet and any moons have been initialized:
+		# this = planet scope
+		# prev = solar_system scope
+		# root = first system in this initializer tree (if any)
+		# prevprev = previous system in this tree (if any)
+		# init_effect = {
+		# 	set_name = "init_effect example name"
+		# }
+		
+		# # Create a standalone orbital line, unrelated to any other object (meaning it will remain even if the planet is destroyed):
+		# orbital_line = {
+		# 	orbit_distance_from_parent = 20	# Distance from the planet's center, irrespective of other distances, planets or moons
+		# }
+	}
+
+	# The following is shorthand, equivalent to "planet = { class = none orbit_distance = X }":
+}

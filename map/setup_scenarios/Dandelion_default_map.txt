@@ -1,38 +1,29 @@
-### Static map. 1400+ star systems. Map of Full Galaxy with all races.
-### This map must NOT include the zeta aquilae system, otherwise game will identify map as alpha/beta quadrant map.
-### This map must include the Signum system, initializer signum_mm, which is used to identify the map.
 static_galaxy_scenario = {
 	name = "DD_basic_scenario"
 	colonizable_planet_odds = 0.80
 	priority = 0
-	num_empires = { min = 0 max = 0 }
-    num_empire_default = 0
+	num_empires = { min = 0 max = 18 }
+    num_empire_default = 9
 	num_wormhole_pairs_default = 0
 	num_gateways_default = 0
-	num_hyperlanes = { min = 0 max = 0 }
-	num_hyperlanes_default = 0
+	num_hyperlanes = { min = 1 max = 1 }
+	num_hyperlanes_default = 1
 	advanced_empire_default = 0
-	fallen_empire_default = 0
-	fallen_empire_max = 0
+	fallen_empire_default = 2
+	fallen_empire_max = 2
 	marauder_empire_default = 0
 	marauder_empire_max = 0
 	advanced_empire_default = 0
-	primitive_odds = 0
-	crisis_strength = 0
+	primitive_odds = 1.0
+	crisis_strength = 1.0
 	core_radius = 80
 	random_hyperlanes = no
 	default = yes
+	
+	num_nebulas	= 6
+	nebula_size = 60
+	nebula_min_dist = 200
 
-	supports_shape = elliptical
-	supports_shape = spiral_2
-	supports_shape = spiral_3
-	supports_shape = spiral_4
-	supports_shape = spiral_6
-	supports_shape = ring
-	supports_shape = cartwheel
-	supports_shape = starburst
-	supports_shape = bar
-	supports_shape = spoked
 	# Systems start
 	system = { id = "-23" name = "-23" position = { x = -23 y = -120 } }
 	system = { id = "0" name = "0" position = { x = 369 y = 193 } }
@@ -108,7 +99,7 @@ static_galaxy_scenario = {
 	system = { id = "27" name = "27" position = { x = -185 y = -83 } }
 	add_hyperlane = { from = "27" to = "243" }
 	add_hyperlane = { from = "27" to = "743" }
-	system = { id = "28" name = "28" position = { x = 249 y = -254 } }
+	system = { id = "28" name = "28" position = { x = 249 y = -254 } initializer = ralis_seddom }
 	add_hyperlane = { from = "28" to = "514" }
 	system = { id = "29" name = "29" position = { x = 18 y = 127 } }
 	add_hyperlane = { from = "29" to = "518" }
@@ -557,7 +548,7 @@ static_galaxy_scenario = {
 	add_hyperlane = { from = "177" to = "48" }
 	add_hyperlane = { from = "177" to = "33" }
 	add_hyperlane = { from = "177" to = "331" }
-	system = { id = "178" name = "178" position = { x = -55 y = -464 } }
+	system = { id = "178" name = "178" position = { x = -55 y = -464 } initializer = NAME_Hauer }
 	add_hyperlane = { from = "178" to = "799" }
 	system = { id = "179" name = "179" position = { x = 199 y = 51 } }
 	add_hyperlane = { from = "179" to = "429" }
@@ -2456,6 +2447,5 @@ static_galaxy_scenario = {
 	add_hyperlane = { from = "816" to = "814" }
 	system = { id = "817" name = "817" position = { x = -260 y = -294 } }
 	add_hyperlane = { from = "817" to = "145" }
-
 	# Systems end
 }
