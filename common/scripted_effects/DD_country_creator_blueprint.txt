@@ -1,0 +1,61 @@
+# create_NAME = {
+# 	if = {
+# 		limit = {
+# 			NOT = { exists = event_target:the_NAME }
+# 		}
+# 		random_galaxy_planet = {
+# 			limit = { has_planet_flag = homeworld_NAME }
+# 			create_species = {
+# 				name = ""
+# 				class = 
+# 				portrait = 
+# 				homeworld = this
+# 				namelist = 
+# 				traits = {
+# 					trait=""
+# 					ideal_planet_class = ""
+# 				}
+# 				effect = { save_global_event_target_as = NAME_Species }
+# 			}
+# 			last_created_species = { save_global_event_target_as = NAME_Species }
+# 			create_country = {
+# 				name = "PRESCRIPTED_species_name_NAME"
+# 				type = default
+# 				ignore_initial_colony_error = yes
+# 				civics = {
+
+# 				}
+# 				origin = 
+# 				authority
+# 				name_list
+# 				ethos = {
+# 					ethic
+# 				}
+# 				species = event_target:NAME_Species
+# 				flag = {
+# 					icon
+# 					background
+# 					colors
+# 				}
+# 				ship_prefix
+# 				effect = {
+# 					set_graphical_culture
+# 					set_country_flag
+# 					save_global_event_target_as = the_NAME
+# 				}
+# 			}
+# 			set_owner = event_target:the_NAME
+# 			set_capital = yes
+# 			set_name = "PRESCRIPTED_species_name_NAME"
+# 			random_country = {
+# 				limit = { has_country_flag = the_NAME }
+# 				save_global_event_target_as = the_NAME
+# 				species = { save_global_event_target_as = NAME_Species }
+# 				owner_species = { set_species_homeworld = prevprev }
+# 				# start add
+# 			}
+# 			set_owner = event_target:the_NAME
+# 			generate_starting_pops = { pops_species_1 = 24 }
+# 		}
+# 	}
+# }

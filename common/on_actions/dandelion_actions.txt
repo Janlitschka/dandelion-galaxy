@@ -1,5 +1,6 @@
 on_game_start = {
 	events = {
 		dandelion_start.1
+		dandelion_start.100
 	}
 }

@@ -14,3 +14,37 @@ event = {
 		}
 	}
 }
+event = {
+	id = dandelion_start.100
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_unah_republic = yes
+		create_ralis_sanctuary = yes
+		create_kulom_confederacy = yes
+		create_tyrun_royal_sectors = yes
+		create_crowned_republic = yes
+		create_lunar_federation = yes
+		create_galactic_commonwealth = yes
+		create_man_commonwealth = yes
+		create_united_sol_republic = yes
+		create_republic_cirran = yes
+		create_custodianship = yes
+		create_republic_reem = yes
+		create_salerian_independant_space = yes
+		create_solar_unionstate = yes
+		create_hondu_space = yes
+		create_tennem_union = yes
+		create_kingdom_wehn = yes
+		create_rogadar_communes = yes
+		create_hellas_republic = yes
+		create_cefton_corp = yes
+		create_kaidun_reraak = yes
+		create_laevo_systems = yes
+		create_demeda_confederacy = yes
+		create_galactic_free_state = yes
+		create_kratzi_industries = yes
+		create_human_republic = yes
+		create_rahnkadir_empire = yes
+	}
+}

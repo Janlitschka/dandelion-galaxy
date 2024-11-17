@@ -1,0 +1,2876 @@
+create_unah_republic = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_unah_republic }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_unah_republic }
+			create_species = {
+				name = "PRESCRIPTED_species_name_unah_republic"
+				class = "TOX"
+				portrait = "tox6"
+				homeworld = this
+				namelist = "TOX1"
+				traits = {
+					trait = "trait_inorganic_breath"
+					trait = "trait_adaptive"
+					trait = "trait_weak"
+					trait = "trait_slow_breeders"
+					ideal_planet_class = "pc_pd_fog_desert"
+				}
+				plural = "PRESCRIPTED_species_plural_unah_republic"
+				adjective = "PRESCRIPTED_species_adjective_unah_republic"
+				gender = not_set
+				effect = { save_global_event_target_as = unah_republic_Species }
+			}
+			last_created_species = { save_global_event_target_as = unah_republic_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_unah_republic"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "lrsk_gov_var_civic_republicanism"
+					civic = "civic_merchant_guilds"
+					civic = "civic_gaseous_fracking_techniques"
+				}
+				origin = "originsextended_heart"
+				authority = "auth_democratic"
+				name_list = "TOX1"
+				ethos = {
+					ethic = "ethic_egalitarian"
+					ethic = "ethic_xenophile"
+					ethic = "ethic_materialist"
+				}
+				species = event_target:unah_republic_Species
+				flag = {
+					icon = {
+						category = "IBS_flag_misc_2"
+						file = "z_flag_misc_2_79.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "twins_empty_hexreverse.dds"
+					}
+					colors = {
+						"red"
+						"shadow_teal"
+						"blue"
+						"null"
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_unah_republic"
+				effect = {
+					set_graphical_culture = "toxoid_01"
+					set_country_flag = the_unah_republic
+					save_global_event_target_as = the_unah_republic
+				}
+			}
+			set_owner = event_target:the_unah_republic
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_unah_republic"
+			random_country = {
+				limit = { has_country_flag = the_unah_republic }
+				save_global_event_target_as = the_unah_republic
+				species = { save_global_event_target_as = unah_republic_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_unah_republic"
+					gender = female
+					traits = {
+						trait = "leader_trait_principled"
+					}
+					effect = {
+						save_event_target_as = ruler_unah_republic
+					}
+				}
+				set_leader = event_target:ruler_unah_republic
+			}
+			set_owner = event_target:the_unah_republic
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_unah_republic"
+				create_starbase_effect = {
+					COUNTRY = unah_republic
+				}
+			}
+		}
+	}
+}
+create_ralis_sanctuary = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_ralis_sanctuary }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_ralis_sanctuary }
+			create_species = {
+				name = "PRESCRIPTED_species_name_ralis_sanctuary"
+				class = "AVI"
+				portrait = "cyb5"
+				homeworld = this
+				namelist = "MOL4"
+				traits = {
+					trait = "trait_originsextended_starless"
+					trait = "trait_intelligent"
+					trait = "trait_conservational"
+					trait = "trait_rooted"
+					ideal_planet_class = "pc_pd_cold_tidally_locked"
+				}
+				plural = "PRESCRIPTED_species_plural_ralis_sanctuary"
+				adjective = "PRESCRIPTED_species_adjective_ralis_sanctuary"
+				gender = not_set
+				effect = { save_global_event_target_as = ralis_sanctuary_Species }
+			}
+			last_created_species = { save_global_event_target_as = ralis_sanctuary_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_ralis_sanctuary"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_crime_heaven"
+					civic = "lrsk_gov_var_civic_enlightened_liberalism"
+					civic = "civic_merchant_guilds"
+				}
+				origin = "originsextended_starless"
+				authority = "auth_oligarchic"
+				name_list = "MOL4"
+				ethos = {
+					ethic = "ethic_authoritarian"
+					ethic = "ethic_fanatic_xenophile"
+				}
+				species = event_target:ralis_sanctuary_Species
+				flag = {
+					icon = {
+						category = "industrial1"
+						file = "industrial_16.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "soleillevant alt.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_ralis_sanctuary"
+				effect = {
+					set_graphical_culture = "avian_01"
+					set_country_flag = the_ralis_sanctuary
+					save_global_event_target_as = the_ralis_sanctuary
+				}
+			}
+			set_owner = event_target:the_ralis_sanctuary
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_ralis_sanctuary"
+			random_country = {
+				limit = { has_country_flag = the_ralis_sanctuary }
+				save_global_event_target_as = the_ralis_sanctuary
+				species = { save_global_event_target_as = ralis_sanctuary_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_ralis_sanctuary"
+					gender = female
+					traits = {
+						trait = null
+					}
+					effect = {
+						save_event_target_as = ruler_ralis_sanctuary
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_ralis_sanctuary"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_ralis_sanctuary"
+				set_female_heir_title = "PRESCRIPTED_heir_title_ralis_sanctuary"
+				set_leader = event_target:ruler_ralis_sanctuary
+			}
+			set_owner = event_target:the_ralis_sanctuary
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "originsextended_starless_system"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_ralis_sanctuary"
+				create_starbase_effect = {
+					COUNTRY = ralis_sanctuary
+				}
+			}
+		}
+	}
+}
+create_kulom_confederacy = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_kulom_confederacy }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_kulom_confederacy }
+			create_species = {
+				name = "PRESCRIPTED_species_name_kulom_confederacy"
+				class = "MOL"
+				portrait = "mol12"
+				homeworld = this
+				namelist = "MOL4"
+				traits = {
+					trait = "trait_clone_soldier_infertile"
+					trait = "trait_territorial"
+					trait = "trait_strong"
+					ideal_planet_class = "pc_pd_retinal"
+				}
+				plural = "PRESCRIPTED_species_plural_kulom_confederacy"
+				adjective = "PRESCRIPTED_species_adjective_kulom_confederacy"
+				gender = not_set
+				effect = { save_global_event_target_as = kulom_confederacy_Species }
+			}
+			last_created_species = { save_global_event_target_as = kulom_confederacy_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_kulom_confederacy"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_shadow_council"
+					civic = "lrsk_gov_var_civic_institutionalized_collectivism"
+					civic = "civic_personal_weapons"
+				}
+				origin = "origin_clone_army"
+				authority = "auth_oligarchic"
+				name_list = "MOL4"
+				ethos = {
+					ethic = "ethic_xenophobe"
+					ethic = "ethic_militarist"
+					ethic = "ethic_materialist"
+				}
+				species = event_target:kulom_confederacy_Species
+				flag = {
+					icon = {
+						category = "e4re_068"
+						file = "1470101152.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "flag_BG_52.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_kulom_confederacy"
+				effect = {
+					set_graphical_culture = "molluscoid_01"
+					set_country_flag = the_kulom_confederacy
+					save_global_event_target_as = the_kulom_confederacy
+				}
+			}
+			set_owner = event_target:the_kulom_confederacy
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_kulom_confederacy"
+			random_country = {
+				limit = { has_country_flag = the_kulom_confederacy }
+				save_global_event_target_as = the_kulom_confederacy
+				species = { save_global_event_target_as = kulom_confederacy_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "commander"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_kulom_confederacy"
+					gender = female
+					traits = {
+						trait = "trait_ruler_logistic_understanding"
+					}
+					effect = {
+						save_event_target_as = ruler_kulom_confederacy
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_kulom_confederacy"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_kulom_confederacy"
+				set_leader = event_target:ruler_kulom_confederacy
+			}
+			set_owner = event_target:the_kulom_confederacy
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "mhs_qastliani_system"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_kulom_confederacy"
+				create_starbase_effect = {
+					COUNTRY = kulom_confederacy
+				}
+			}
+		}
+	}
+}
+create_tyrun_royal_sectors = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_tyrun_royal_sectors }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_tyrun_royal_sectors }
+			create_species = {
+				name = "PRESCRIPTED_species_name_tyrun_royal_sectors"
+				class = "ART"
+				portrait = "art20"
+				homeworld = this
+				namelist = "FUN2"
+				traits = {
+					trait = "trait_humanoid_existential_iteroparity"
+					trait = "trait_charismatic"
+					trait = "trait_decadent"
+					trait = "trait_slow_learners"
+					ideal_planet_class = "pc_pd_coral"
+				}
+				plural = "PRESCRIPTED_species_plural_tyrun_royal_sectors"
+				adjective = "PRESCRIPTED_species_adjective_tyrun_royal_sectors"
+				gender = female
+				effect = { save_global_event_target_as = tyrun_royal_sectors_Species }
+			}
+			last_created_species = { save_global_event_target_as = tyrun_royal_sectors_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_tyrun_royal_sectors"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_feudal_realm"
+					civic = "civic_slaver_guilds"
+					civic = "MC_Hydra_civic_sapient_eaters"
+				}
+				origin = "originsextended_engineered"
+				authority = "auth_imperial"
+				name_list = "FUN2"
+				ethos = {
+					ethic = "ethic_authoritarian"
+					ethic = "ethic_fanatic_xenophobe"
+				}
+				species = event_target:tyrun_royal_sectors_Species
+				flag = {
+					icon = {
+						category = "domination"
+						file = "domination_9318.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "flag_BG_8.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_tyrun_royal_sectors"
+				effect = {
+					set_graphical_culture = "reptilian_01"
+					set_country_flag = the_tyrun_royal_sectors
+					save_global_event_target_as = the_tyrun_royal_sectors
+				}
+			}
+			set_owner = event_target:the_tyrun_royal_sectors
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_tyrun_royal_sectors"
+			random_country = {
+				limit = { has_country_flag = the_tyrun_royal_sectors }
+				save_global_event_target_as = the_tyrun_royal_sectors
+				species = { save_global_event_target_as = tyrun_royal_sectors_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_tyrun_royal_sectors"
+					gender = female
+					traits = {
+						trait = "trait_ruler_logistic_understanding"
+					}
+					effect = {
+						save_event_target_as = ruler_tyrun_royal_sectors
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_tyrun_royal_sectors"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_tyrun_royal_sectors"
+				set_leader = event_target:ruler_tyrun_royal_sectors
+			}
+			set_owner = event_target:the_tyrun_royal_sectors
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_tyrun_royal_sectors"
+				create_starbase_effect = {
+					COUNTRY = tyrun_royal_sectors
+				}
+			}
+		}
+	}
+}
+create_crowned_republic = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_crowned_republic }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_crowned_republic }
+			create_species = {
+				name = "PRESCRIPTED_species_name_crowned_republic"
+				class = "HUM"
+				portrait = "human"
+				homeworld = this
+				namelist = "SurprisinglyHumanMk2"
+				traits = {
+					trait = "trait_adaptive"
+					trait = "trait_nomadic"
+					trait = "trait_weak"
+					ideal_planet_class = "pc_continental"
+				}
+				plural = "PRESCRIPTED_species_plural_crowned_republic"
+				adjective = "PRESCRIPTED_species_adjective_crowned_republic"
+				gender = not_set
+				effect = { save_global_event_target_as = crowned_republic_Species }
+			}
+			last_created_species = { save_global_event_target_as = crowned_republic_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_crowned_republic"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_merchant_guilds"
+					civic = "civic_police_state"
+					civic = "MC_Hydra_civic_world_crackers"
+				}
+				origin = "origin_unification_wars"
+				authority = "auth_dictatorial"
+				name_list = "SurprisinglyHumanMk2"
+				ethos = {
+					ethic = "ethic_fanatic_militarist"
+					ethic = "ethic_materialist"
+				}
+				species = event_target:crowned_republic_Species
+				flag = {
+					icon = {
+						category = "IBS_flag_space"
+						file = "z_flag_space_45.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "tribandes.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_crowned_republic"
+				effect = {
+					set_graphical_culture = "plantoid_01"
+					set_country_flag = the_crowned_republic
+					save_global_event_target_as = the_crowned_republic
+				}
+			}
+			set_owner = event_target:the_crowned_republic
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_crowned_republic"
+			random_country = {
+				limit = { has_country_flag = the_crowned_republic }
+				save_global_event_target_as = the_crowned_republic
+				species = { save_global_event_target_as = crowned_republic_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "scientist"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_crowned_republic"
+					gender = female
+					traits = {
+						trait = "trait_ruler_eye_for_talent"
+					}
+					effect = {
+						save_event_target_as = ruler_crowned_republic
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_crowned_republic"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_crowned_republic"
+				set_female_heir_title = "PRESCRIPTED_heir_title_crowned_republic"
+				set_female_heir_title = "PRESCRIPTED_heir_female_title_crowned_republic"
+				set_leader = event_target:ruler_crowned_republic
+			}
+			set_owner = event_target:the_crowned_republic
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "mars_system_initializer"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_crowned_republic"
+				create_starbase_effect = {
+					COUNTRY = crowned_republic
+				}
+			}
+		}
+	}
+}
+create_lunar_federation = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_lunar_federation }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_lunar_federation }
+			create_species = {
+				name = "PRESCRIPTED_species_name_lunar_federation"
+				class = "HUM"
+				portrait = "human"
+				homeworld = this
+				namelist = "HUMAN1"
+				traits = {
+					trait = "trait_adaptive"
+					trait = "trait_nomadic"
+					trait = "trait_mzilli_distant_origin_sol"
+					trait = "trait_humanoid_jinxed"
+					ideal_planet_class = "pc_pd_lake"
+				}
+				plural = "PRESCRIPTED_species_plural_lunar_federation"
+				adjective = "PRESCRIPTED_species_adjective_lunar_federation"
+				gender = not_set
+				effect = { save_global_event_target_as = lunar_federation_Species }
+			}
+			last_created_species = { save_global_event_target_as = lunar_federation_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_lunar_federation"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_shared_burden"
+					civic = "civic_diplomatic_corps"
+					civic = "civic_id_tier_1"
+				}
+				origin = "BOO_origin_gate"
+				authority = "auth_democratic"
+				name_list = "HUMAN1"
+				ethos = {
+					ethic = "ethic_fanatic_egalitarian"
+					ethic = "ethic_pacifist"
+				}
+				species = event_target:lunar_federation_Species
+				flag = {
+					icon = {
+						category = "expanse"
+						file = "11-Luna.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_lunar_federation"
+				effect = {
+					set_graphical_culture = "cybernetics_01"
+					set_country_flag = the_lunar_federation
+					save_global_event_target_as = the_lunar_federation
+				}
+			}
+			set_owner = event_target:the_lunar_federation
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_lunar_federation"
+			random_country = {
+				limit = { has_country_flag = the_lunar_federation }
+				save_global_event_target_as = the_lunar_federation
+				species = { save_global_event_target_as = lunar_federation_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "commander"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_lunar_federation"
+					gender = female
+					traits = {
+						trait = "leader_trait_fleet_organizer"
+					}
+					effect = {
+						save_event_target_as = ruler_lunar_federation
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_lunar_federation"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_lunar_federation"
+				set_leader = event_target:ruler_lunar_federation
+			}
+			set_owner = event_target:the_lunar_federation
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "custom_starting_init_06"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_lunar_federation"
+				create_starbase_effect = {
+					COUNTRY = lunar_federation
+				}
+			}
+		}
+	}
+}
+create_galactic_commonwealth = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_galactic_commonwealth }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_galactic_commonwealth }
+			create_species = {
+				name = "PRESCRIPTED_species_name_galactic_commonwealth"
+				class = "HUM"
+				portrait = "cyb8"
+				homeworld = this
+				namelist = "HUM2"
+				traits = {
+					trait = "trait_communal"
+					trait = "trait_docile"
+					trait = "trait_wasteful"
+					ideal_planet_class = "pc_pd_cenote"
+				}
+				plural = "PRESCRIPTED_species_plural_galactic_commonwealth"
+				adjective = "PRESCRIPTED_species_adjective_galactic_commonwealth"
+				gender = not_set
+				effect = { save_global_event_target_as = galactic_commonwealth_Species }
+			}
+			last_created_species = { save_global_event_target_as = galactic_commonwealth_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_galactic_commonwealth"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_federation_government"
+					civic = "civic_diplomatic_corps"
+					civic = "civic_free_haven"
+				}
+				origin = "origin_technological_enlightenment"
+				authority = "auth_democratic"
+				name_list = "HUM2"
+				ethos = {
+					ethic = "ethic_egalitarian"
+					ethic = "ethic_fanatic_xenophile"
+				}
+				species = event_target:galactic_commonwealth_Species
+				flag = {
+					icon = {
+						category = "e4re_019"
+						file = "abstract-069.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "flag_BG_37.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_galactic_commonwealth"
+				effect = {
+					set_graphical_culture = "cybernetics_01"
+					set_country_flag = the_galactic_commonwealth
+					save_global_event_target_as = the_galactic_commonwealth
+				}
+			}
+			set_owner = event_target:the_galactic_commonwealth
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_galactic_commonwealth"
+			random_country = {
+				limit = { has_country_flag = the_galactic_commonwealth }
+				save_global_event_target_as = the_galactic_commonwealth
+				species = { save_global_event_target_as = galactic_commonwealth_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_galactic_commonwealth"
+					gender = female
+					traits = {
+						trait = "trait_ruler_eye_for_talent"
+					}
+					effect = {
+						save_event_target_as = ruler_galactic_commonwealth
+					}
+				}
+				set_leader = event_target:ruler_galactic_commonwealth
+			}
+			set_owner = event_target:the_galactic_commonwealth
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "mhs_me_harsa_system"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_galactic_commonwealth"
+				create_starbase_effect = {
+					COUNTRY = galactic_commonwealth
+				}
+			}
+		}
+	}
+}
+create_man_commonwealth = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_man_commonwealth }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_man_commonwealth }
+			create_species = {
+				name = "PRESCRIPTED_species_name_humans2"
+				class = "HUM"
+				portrait = "human"
+				homeworld = this
+				namelist = "HUMAN2"
+				traits = {
+					trait = "trait_adaptive"
+					trait = "trait_nomadic"
+					trait = "trait_mzilli_distant_origin_sol"
+					trait = "trait_quarrelsome"
+					ideal_planet_class = "pc_continental"
+				}
+				plural = "PRESCRIPTED_species_plural_humans2"
+				adjective = "PRESCRIPTED_species_adjective_humans2"
+				gender = not_set
+				effect = { save_global_event_target_as = man_commonwealth_Species }
+			}
+			last_created_species = { save_global_event_target_as = man_commonwealth_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_man_commonwealth"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "lrsk_gov_var_civic_republicanism"
+					civic = "civic_citizen_service"
+					civic = "civic_id_bulwark"
+				}
+				origin = "origin_lost_colony"
+				authority = "auth_democratic"
+				name_list = "HUMAN2"
+				ethos = {
+					ethic = "ethic_fanatic_xenophobe"
+					ethic = "ethic_militarist"
+				}
+				species = event_target:man_commonwealth_Species
+				flag = {
+					icon = {
+						category = "IBS_flag_misc_3"
+						file = "z_flag_misc_3_159.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "twins_spare2.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_man_commonwealth"
+				effect = {
+					set_graphical_culture = "nemesis_01"
+					set_country_flag = the_man_commonwealth
+					save_global_event_target_as = the_man_commonwealth
+				}
+			}
+			set_owner = event_target:the_man_commonwealth
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_man_commonwealth"
+			random_country = {
+				limit = { has_country_flag = the_man_commonwealth }
+				save_global_event_target_as = the_man_commonwealth
+				species = { save_global_event_target_as = man_commonwealth_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "commander"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_man_commonwealth"
+					gender = male
+					traits = {
+						trait = "trait_ruler_warlike"
+					}
+					effect = {
+						save_event_target_as = ruler_man_commonwealth
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_man_commonwealth"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_man_commonwealth"
+				set_leader = event_target:ruler_man_commonwealth
+			}
+			set_owner = event_target:the_man_commonwealth
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "deneb_system"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_man_commonwealth"
+				create_starbase_effect = {
+					COUNTRY = man_commonwealth
+				}
+			}
+		}
+	}
+}
+create_united_sol_republic = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_united_sol_republic }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_united_sol_republic }
+			create_species = {
+				name = "PRESCRIPTED_species_name_united_sol_republic"
+				class = "HUM"
+				portrait = "human"
+				homeworld = this
+				namelist = "HUMAN1"
+				traits = {
+					trait = "trait_adaptive"
+					trait = "trait_nomadic"
+					trait = "trait_deviants"
+					ideal_planet_class = "pc_continental"
+				}
+				plural = "PRESCRIPTED_species_plural_united_sol_republic"
+				adjective = "PRESCRIPTED_species_adjective_united_sol_republic"
+				gender = not_set
+				effect = { save_global_event_target_as = united_sol_republic_Species }
+			}
+			last_created_species = { save_global_event_target_as = united_sol_republic_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_united_sol_republic"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_emergency_government"
+					civic = "lrsk_gov_var_civic_supremacist_demagoguery"
+					civic = "civic_bringers_of_death"
+				}
+				origin = "BOO_origin_militarist"
+				authority = "auth_oligarchic"
+				name_list = "HUMAN1"
+				ethos = {
+					ethic = "ethic_authoritarian"
+					ethic = "ethic_xenophobe"
+					ethic = "ethic_militarist"
+				}
+				species = event_target:united_sol_republic_Species
+				flag = {
+					icon = {
+						category = "IBS_flag_misc_3"
+						file = "z_flag_misc_3_54.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "twins_spare2.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_united_sol_republic"
+				effect = {
+					set_graphical_culture = "synthetics_01"
+					set_country_flag = the_united_sol_republic
+					save_global_event_target_as = the_united_sol_republic
+				}
+			}
+			set_owner = event_target:the_united_sol_republic
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_united_sol_republic"
+			random_country = {
+				limit = { has_country_flag = the_united_sol_republic }
+				save_global_event_target_as = the_united_sol_republic
+				species = { save_global_event_target_as = united_sol_republic_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_united_sol_republic"
+					gender = male
+					traits = {
+						trait = "leader_trait_principled"
+					}
+					effect = {
+						save_event_target_as = ruler_united_sol_republic
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_united_sol_republic"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_united_sol_republic"
+				set_leader = event_target:ruler_united_sol_republic
+			}
+			set_owner = event_target:the_united_sol_republic
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_united_sol_republic"
+				create_starbase_effect = {
+					COUNTRY = united_sol_republic
+				}
+			}
+		}
+	}
+}
+create_republic_cirran = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_republic_cirran }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_republic_cirran }
+			create_species = {
+				name = "PRESCRIPTED_species_name_republic_cirran"
+				class = "REP"
+				portrait = "rep3"
+				homeworld = this
+				namelist = "REP3"
+				traits = {
+					trait = "trait_agrarian"
+					trait = "trait_resilient"
+					trait = "trait_conservational"
+					trait = "trait_unruly"
+					ideal_planet_class = "pc_pd_outback"
+				}
+				plural = "PRESCRIPTED_species_plural_republic_cirran"
+				adjective = "PRESCRIPTED_species_adjective_republic_cirran"
+				gender = not_set
+				effect = { save_global_event_target_as = republic_cirran_Species }
+			}
+			last_created_species = { save_global_event_target_as = republic_cirran_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_republic_cirran"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_merchant_guilds"
+					civic = "civic_functional_architecture"
+					civic = "civic_relentless_industrialists"
+				}
+				origin = "origin_desert_station"
+				authority = "auth_oligarchic"
+				name_list = "REP3"
+				ethos = {
+					ethic = "ethic_egalitarian"
+					ethic = "ethic_xenophile"
+					ethic = "ethic_materialist"
+				}
+				species = event_target:republic_cirran_Species
+				flag = {
+					icon = {
+						category = "e4re_018"
+						file = "abstract-041.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_republic_cirran"
+				effect = {
+					set_graphical_culture = "arthropoid_01"
+					set_country_flag = the_republic_cirran
+					save_global_event_target_as = the_republic_cirran
+				}
+			}
+			set_owner = event_target:the_republic_cirran
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_republic_cirran"
+			random_country = {
+				limit = { has_country_flag = the_republic_cirran }
+				save_global_event_target_as = the_republic_cirran
+				species = { save_global_event_target_as = republic_cirran_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_republic_cirran"
+					gender = female
+					traits = {
+						trait = "trait_ruler_industrialist"
+					}
+					effect = {
+						save_event_target_as = ruler_republic_cirran
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_republic_cirran"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_republic_cirran"
+				set_leader = event_target:ruler_republic_cirran
+			}
+			set_owner = event_target:the_republic_cirran
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_republic_cirran"
+				create_starbase_effect = {
+					COUNTRY = republic_cirran
+				}
+			}
+		}
+	}
+}
+create_custodianship = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_custodianship }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_custodianship }
+			create_species = {
+				name = "PRESCRIPTED_species_name_custodianship"
+				class = "MACHINE"
+				portrait = "sd_mam_robot"
+				homeworld = this
+				namelist = "MACHINE1"
+				traits = {
+					trait = "trait_machine_unit"
+					trait = "trait_robot_survivor"
+					trait = "trait_robot_immortality"
+					trait = "trait_robot_emotion_emulators"
+					trait = "trait_robot_bulky"
+					trait = "trait_robot_repurposed_hardware"
+					trait = "trait_robot_high_bandwidth"
+					ideal_planet_class = "pc_continental"
+				}
+				plural = "PRESCRIPTED_species_plural_custodianship"
+				adjective = "PRESCRIPTED_species_adjective_custodianship"
+				gender = not_set
+				effect = { save_global_event_target_as = custodianship_Species }
+			}
+			last_created_species = { save_global_event_target_as = custodianship_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_custodianship"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_machine_ascensionists"
+					civic = "civic_machine_introspective"
+					civic = "lrsk_gov_var_civic_machine_diplomatic_protocols"
+				}
+				origin = "origin_post_apocalyptic_machines"
+				authority = "auth_machine_intelligence"
+				name_list = "MACHINE1"
+				ethos = {
+					ethic = "ethic_gestalt_consciousness"
+				}
+				species = event_target:custodianship_Species
+				flag = {
+					icon = {
+						category = "spherical"
+						file = "flag_spherical_9303.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "stripes.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_custodianship"
+				effect = {
+					set_graphical_culture = "machine_01"
+					set_country_flag = the_custodianship
+					save_global_event_target_as = the_custodianship
+				}
+			}
+			set_owner = event_target:the_custodianship
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_custodianship"
+			random_country = {
+				limit = { has_country_flag = the_custodianship }
+				save_global_event_target_as = the_custodianship
+				species = { save_global_event_target_as = custodianship_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_custodianship"
+					gender = male
+					traits = {
+						trait = "trait_ruler_feedback_loop"
+					}
+					effect = {
+						save_event_target_as = ruler_custodianship
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_custodianship"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_custodianship"
+				set_female_heir_title = "PRESCRIPTED_heir_title_custodianship"
+				set_leader = event_target:ruler_custodianship
+			}
+			set_owner = event_target:the_custodianship
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_custodianship"
+				create_starbase_effect = {
+					COUNTRY = custodianship
+				}
+			}
+		}
+	}
+}
+create_republic_reem = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_republic_reem }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_republic_reem }
+			create_species = {
+				name = "PRESCRIPTED_species_name_republic_reem"
+				class = "AQUATIC"
+				portrait = "aqu11"
+				homeworld = this
+				namelist = "MOL4"
+				traits = {
+					trait = "trait_aquatic"
+					trait = "trait_resilient"
+					trait = "trait_ingenious"
+					trait = "trait_unruly"
+					trait = "trait_quarrelsome"
+					ideal_planet_class = "pc_pd_reef"
+				}
+				plural = "PRESCRIPTED_species_plural_republic_reem"
+				adjective = "PRESCRIPTED_species_adjective_republic_reem"
+				gender = not_set
+				effect = { save_global_event_target_as = republic_reem_Species }
+			}
+			last_created_species = { save_global_event_target_as = republic_reem_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_republic_reem"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_distinguished_admiralty"
+					civic = "civic_anglers"
+					civic = "civic_sovereign_guardianship"
+				}
+				origin = "BOO_origin_xenophobe"
+				authority = "auth_imperial"
+				name_list = "MOL4"
+				ethos = {
+					ethic = "ethic_xenophobe"
+					ethic = "ethic_militarist"
+					ethic = "ethic_spiritualist"
+				}
+				species = event_target:republic_reem_Species
+				flag = {
+					icon = {
+						category = "mtg_main_1"
+						file = "20110204_mirrordin_beseiged.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "twins_spare2.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_keralle"
+				effect = {
+					set_graphical_culture = "aquatic_01"
+					set_country_flag = the_republic_reem
+					save_global_event_target_as = the_republic_reem
+				}
+			}
+			set_owner = event_target:the_republic_reem
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_republic_reem"
+			random_country = {
+				limit = { has_country_flag = the_republic_reem }
+				save_global_event_target_as = the_republic_reem
+				species = { save_global_event_target_as = republic_reem_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "commander"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_republic_reem"
+					gender = female
+					traits = {
+						trait = "trait_ruler_warlike"
+					}
+					effect = {
+						save_event_target_as = ruler_republic_reem
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_republic_reem"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_republic_reem"
+				set_leader = event_target:ruler_republic_reem
+			}
+			set_owner = event_target:the_republic_reem
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_republic_reem"
+				create_starbase_effect = {
+					COUNTRY = republic_reem
+				}
+			}
+		}
+	}
+}
+create_salerian_independant_space = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_salerian_independant_space }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_salerian_independant_space }
+			create_species = {
+				name = "PRESCRIPTED_species_name_salerian_independant_space"
+				class = "TOX"
+				portrait = "tox13"
+				homeworld = this
+				namelist = "PLANT4"
+				traits = {
+					trait = "trait_venerable"
+					trait = "trait_incubator"
+					trait = "trait_weak"
+					trait = "trait_repugnant"
+					trait = "trait_solitary"
+					ideal_planet_class = "pc_pd_fungi"
+				}
+				plural = "PRESCRIPTED_species_plural_salerian_independant_space"
+				adjective = "PRESCRIPTED_species_adjective_salerian_independant_space"
+				gender = not_set
+				effect = { save_global_event_target_as = salerian_independant_space_Species }
+			}
+			last_created_species = { save_global_event_target_as = salerian_independant_space_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_salerian_independant_space"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_ascensionists"
+					civic = "civic_pleasure_seekers"
+					civic = "civic_toxic_baths"
+				}
+				origin = "origin_failed_cryonic"
+				authority = "auth_dictatorial"
+				name_list = "PLANT4"
+				ethos = {
+					ethic = "ethic_xenophobe"
+					ethic = "ethic_fanatic_spiritualist"
+				}
+				species = event_target:salerian_independant_space_Species
+				flag = {
+					icon = {
+						category = "mtg_main_2"
+						file = "coma_20121102_commanders_arsenal.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "flag_BG_11.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_salerian_independant_space"
+				effect = {
+					set_graphical_culture = "toxoid_01"
+					set_country_flag = the_salerian_independant_space
+					save_global_event_target_as = the_salerian_independant_space
+				}
+			}
+			set_owner = event_target:the_salerian_independant_space
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_salerian_independant_space"
+			random_country = {
+				limit = { has_country_flag = the_salerian_independant_space }
+				save_global_event_target_as = the_salerian_independant_space
+				species = { save_global_event_target_as = salerian_independant_space_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_salerian_independant_space"
+					gender = female
+					traits = {
+						trait = "trait_ruler_industrialist"
+					}
+					effect = {
+						save_event_target_as = ruler_salerian_independant_space
+					}
+				}
+				set_leader = event_target:ruler_salerian_independant_space
+			}
+			set_owner = event_target:the_salerian_independant_space
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_salerian_independant_space"
+				create_starbase_effect = {
+					COUNTRY = salerian_independant_space
+				}
+			}
+		}
+	}
+}
+create_solar_unionstate = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_solar_unionstate }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_solar_unionstate }
+			create_species = {
+				name = "PRESCRIPTED_species_name_solar_unionstate"
+				class = "HUM"
+				portrait = "human"
+				homeworld = this
+				namelist = "HUMAN1"
+				traits = {
+					trait = "trait_adaptive"
+					trait = "trait_nomadic"
+					trait = "trait_deviants"
+					ideal_planet_class = "pc_continental"
+				}
+				plural = "PRESCRIPTED_species_plural_solar_unionstate"
+				adjective = "PRESCRIPTED_species_adjective_solar_unionstate"
+				gender = not_set
+				effect = { save_global_event_target_as = solar_unionstate_Species }
+			}
+			last_created_species = { save_global_event_target_as = solar_unionstate_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_solar_unionstate"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_emex_peacekeepers"
+					civic = "lrsk_gov_var_civic_institutionalized_collectivism"
+					civic = "civic_parliamentary_system"
+				}
+				origin = "origin_homeworld_occupiers"
+				authority = "auth_democratic"
+				name_list = "HUMAN1"
+				ethos = {
+					ethic = "ethic_egalitarian"
+					ethic = "ethic_militarist"
+					ethic = "ethic_materialist"
+				}
+				species = event_target:solar_unionstate_Species
+				flag = {
+					icon = {
+						category = "eqsatwargriffon"
+						file = "EQC.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "uthropiastripe.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_solar_unionstate"
+				effect = {
+					set_graphical_culture = "mammalian_01"
+					set_country_flag = the_solar_unionstate
+					save_global_event_target_as = the_solar_unionstate
+				}
+			}
+			set_owner = event_target:the_solar_unionstate
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_solar_unionstate"
+			random_country = {
+				limit = { has_country_flag = the_solar_unionstate }
+				save_global_event_target_as = the_solar_unionstate
+				species = { save_global_event_target_as = solar_unionstate_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_solar_unionstate"
+					gender = male
+					traits = {
+						trait = "leader_trait_principled"
+					}
+					effect = {
+						save_event_target_as = ruler_solar_unionstate
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_solar_unionstate"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_solar_unionstate"
+				set_leader = event_target:ruler_solar_unionstate
+			}
+			set_owner = event_target:the_solar_unionstate
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "sol_system_expanded_1000"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_solar_unionstate"
+				create_starbase_effect = {
+					COUNTRY = solar_unionstate
+				}
+			}
+		}
+	}
+}
+create_hondu_space = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_hondu_space }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_hondu_space }
+			create_species = {
+				name = "PRESCRIPTED_species_name_hondu_space"
+				class = "REP"
+				portrait = "rep5"
+				homeworld = this
+				namelist = "REP4"
+				traits = {
+					trait = "trait_charismatic"
+					trait = "trait_thrifty"
+					trait = "trait_unruly"
+					trait = "trait_quarrelsome"
+					ideal_planet_class = "pc_pd_mediterranean"
+				}
+				plural = "PRESCRIPTED_species_plural_hondu_space"
+				adjective = "PRESCRIPTED_species_adjective_hondu_space"
+				gender = not_set
+				effect = { save_global_event_target_as = hondu_space_Species }
+			}
+			last_created_species = { save_global_event_target_as = hondu_space_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_hondu_space"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_private_healthcare_corporate"
+					civic = "civic_criminal_heritage"
+					civic = "civic_astrometeorology_megacorp"
+				}
+				origin = "origin_gas_giant"
+				authority = "auth_corporate"
+				name_list = "REP4"
+				ethos = {
+					ethic = "ethic_authoritarian"
+					ethic = "ethic_militarist"
+					ethic = "ethic_materialist"
+				}
+				species = event_target:hondu_space_Species
+				flag = {
+					icon = {
+						category = "corporate"
+						file = "corporate_03.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "soleillevant alt.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_hondu_space"
+				effect = {
+					set_graphical_culture = "salvager_01"
+					set_country_flag = the_hondu_space
+					save_global_event_target_as = the_hondu_space
+				}
+			}
+			set_owner = event_target:the_hondu_space
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_hondu_space"
+			random_country = {
+				limit = { has_country_flag = the_hondu_space }
+				save_global_event_target_as = the_hondu_space
+				species = { save_global_event_target_as = hondu_space_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "commander"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_hondu_space"
+					gender = male
+					traits = {
+						trait = "trait_ruler_logistic_understanding"
+					}
+					effect = {
+						save_event_target_as = ruler_hondu_space
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_hondu_space"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_hondu_space"
+				set_female_heir_title = "PRESCRIPTED_heir_title_hondu_space"
+				set_leader = event_target:ruler_hondu_space
+			}
+			set_owner = event_target:the_hondu_space
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "giga_gas_giant_home_system"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_hondu_space"
+				create_starbase_effect = {
+					COUNTRY = hondu_space
+				}
+			}
+		}
+	}
+}
+create_tennem_union = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_tennem_union }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_tennem_union }
+			create_species = {
+				name = "PRESCRIPTED_species_name_tennem_union"
+				class = "REP"
+				portrait = "rep1"
+				homeworld = this
+				namelist = "NECROID2"
+				traits = {
+					trait = "trait_extremely_adaptive"
+					trait = "trait_natural_engineers"
+					trait = "trait_unruly"
+					trait = "trait_quarrelsome"
+					ideal_planet_class = "pc_pd_dry_tidally_locked"
+				}
+				plural = "PRESCRIPTED_species_plural_tennem_union"
+				adjective = "PRESCRIPTED_species_adjective_tennem_union"
+				gender = not_set
+				effect = { save_global_event_target_as = tennem_union_Species }
+			}
+			last_created_species = { save_global_event_target_as = tennem_union_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_tennem_union"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_shadow_council"
+					civic = "civic_scavengers"
+					civic = "lrsk_gov_var_civic_workers_councils"
+				}
+				origin = "origin_pd_interplanetary_settlers"
+				authority = "auth_democratic"
+				name_list = "NECROID2"
+				ethos = {
+					ethic = "ethic_egalitarian"
+					ethic = "ethic_militarist"
+					ethic = "ethic_materialist"
+				}
+				species = event_target:tennem_union_Species
+				flag = {
+					icon = {
+						category = "IBS_flag_space"
+						file = "z_flag_space_34.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "twins_spare2.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_tennem_union"
+				effect = {
+					set_graphical_culture = "humanoid_10"
+					set_country_flag = the_tennem_union
+					save_global_event_target_as = the_tennem_union
+				}
+			}
+			set_owner = event_target:the_tennem_union
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_tennem_union"
+			random_country = {
+				limit = { has_country_flag = the_tennem_union }
+				save_global_event_target_as = the_tennem_union
+				species = { save_global_event_target_as = tennem_union_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_tennem_union"
+					gender = male
+					traits = {
+						trait = "leader_trait_spycraft"
+					}
+					effect = {
+						save_event_target_as = ruler_tennem_union
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_tennem_union"
+				set_female_heir_title = "PRESCRIPTED_heir_title_tennem_union"
+				set_leader = event_target:ruler_tennem_union
+			}
+			set_owner = event_target:the_tennem_union
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "pd_interplanetary_system_initializer"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_tennem_union"
+				create_starbase_effect = {
+					COUNTRY = tennem_union
+				}
+			}
+		}
+	}
+}
+create_kingdom_wehn = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_kingdom_wehn }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_kingdom_wehn }
+			create_species = {
+				name = "PRESCRIPTED_species_name_kingdom_wehn"
+				class = "MAM"
+				portrait = "mam_rat"
+				homeworld = this
+				namelist = "MAM2"
+				traits = {
+					trait = "trait_cave_dweller"
+					trait = "trait_adaptive"
+					trait = "trait_traditional"
+					trait = "trait_sedentary"
+					ideal_planet_class = "pc_pd_salt"
+				}
+				plural = "PRESCRIPTED_species_plural_kingdom_wehn"
+				adjective = "PRESCRIPTED_species_adjective_kingdom_wehn"
+				gender = not_set
+				effect = { save_global_event_target_as = kingdom_wehn_Species }
+			}
+			last_created_species = { save_global_event_target_as = kingdom_wehn_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_kingdom_wehn"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_imperial_cult"
+					civic = "civic_environmentalist"
+					civic = "civic_scavengers"
+				}
+				origin = "origin_subterranean"
+				authority = "auth_imperial"
+				name_list = "MAM2"
+				ethos = {
+					ethic = "ethic_authoritarian"
+					ethic = "ethic_fanatic_spiritualist"
+				}
+				species = event_target:kingdom_wehn_Species
+				flag = {
+					icon = {
+						category = "e4re_067"
+						file = "1407040390.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "inverted_v.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_kingdom_wehn"
+				effect = {
+					set_graphical_culture = "fungoid_01"
+					set_country_flag = the_kingdom_wehn
+					save_global_event_target_as = the_kingdom_wehn
+				}
+			}
+			set_owner = event_target:the_kingdom_wehn
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_kingdom_wehn"
+			random_country = {
+				limit = { has_country_flag = the_kingdom_wehn }
+				save_global_event_target_as = the_kingdom_wehn
+				species = { save_global_event_target_as = kingdom_wehn_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_kingdom_wehn"
+					gender = female
+					traits = {
+						trait = "trait_ruler_charismatic"
+					}
+					effect = {
+						save_event_target_as = ruler_kingdom_wehn
+					}
+				}
+				set_leader = event_target:ruler_kingdom_wehn
+			}
+			set_owner = event_target:the_kingdom_wehn
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_kingdom_wehn"
+				create_starbase_effect = {
+					COUNTRY = kingdom_wehn
+				}
+			}
+		}
+	}
+}
+create_rogadar_communes = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_rogadar_communes }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_rogadar_communes }
+			create_species = {
+				name = "PRESCRIPTED_species_name_rogadar_communes"
+				class = "MAM"
+				portrait = "mam3"
+				homeworld = this
+				namelist = "MAM2"
+				traits = {
+					trait = "trait_conservational"
+					trait = "trait_docile"
+					trait = "trait_sedentary"
+					ideal_planet_class = "pc_continental"
+				}
+				plural = "PRESCRIPTED_species_plural_rogadar_communes"
+				adjective = "PRESCRIPTED_species_adjective_rogadar_communes"
+				gender = not_set
+				effect = { save_global_event_target_as = rogadar_communes_Species }
+			}
+			last_created_species = { save_global_event_target_as = rogadar_communes_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_rogadar_communes"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_agrarian_idyll"
+					civic = "lrsk_gov_var_civic_workers_councils"
+					civic = "civic_free_city_states"
+				}
+				origin = "origin_mom_climate_destroyed"
+				authority = "auth_oligarchic"
+				name_list = "MAM2"
+				ethos = {
+					ethic = "ethic_egalitarian"
+					ethic = "ethic_xenophobe"
+					ethic = "ethic_pacifist"
+				}
+				species = event_target:rogadar_communes_Species
+				flag = {
+					icon = {
+						category = "flusionian"
+						file = "ufs_flag.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_rogadar_communes"
+				effect = {
+					set_graphical_culture = "GF_nyto_01"
+					set_country_flag = the_rogadar_communes
+					save_global_event_target_as = the_rogadar_communes
+				}
+			}
+			set_owner = event_target:the_rogadar_communes
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_rogadar_communes"
+			random_country = {
+				limit = { has_country_flag = the_rogadar_communes }
+				save_global_event_target_as = the_rogadar_communes
+				species = { save_global_event_target_as = rogadar_communes_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "commander"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_rogadar_communes"
+					gender = female
+					traits = {
+						trait = "trait_ruler_warlike"
+					}
+					effect = {
+						save_event_target_as = ruler_rogadar_communes
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_rogadar_communes"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_rogadar_communes"
+				set_female_heir_title = "PRESCRIPTED_heir_title_rogadar_communes"
+				set_female_heir_title = "PRESCRIPTED_heir_title_female_rogadar_communes"
+				set_leader = event_target:ruler_rogadar_communes
+			}
+			set_owner = event_target:the_rogadar_communes
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_rogadar_communes"
+				create_starbase_effect = {
+					COUNTRY = rogadar_communes
+				}
+			}
+		}
+	}
+}
+create_hellas_republic = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_hellas_republic }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_hellas_republic }
+			create_species = {
+				name = "PRESCRIPTED_species_name_hellas_republic"
+				class = "HUM"
+				portrait = "human"
+				homeworld = this
+				namelist = "SurprisinglyHumanMk2"
+				traits = {
+					trait = "trait_adaptive"
+					trait = "trait_nomadic"
+					trait = "trait_weak"
+					ideal_planet_class = "pc_continental"
+				}
+				plural = "PRESCRIPTED_species_plural_hellas_republic"
+				adjective = "PRESCRIPTED_species_adjective_hellas_republic"
+				gender = not_set
+				effect = { save_global_event_target_as = hellas_republic_Species }
+			}
+			last_created_species = { save_global_event_target_as = hellas_republic_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_hellas_republic"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_eager_explorers"
+					civic = "civic_byzantine_bureaucracy"
+					civic = "civic_idealistic_foundation"
+				}
+				origin = "origin_mom_climate_destroyed"
+				authority = "auth_oligarchic"
+				name_list = "SurprisinglyHumanMk2"
+				ethos = {
+					ethic = "ethic_egalitarian"
+					ethic = "ethic_xenophobe"
+					ethic = "ethic_pacifist"
+				}
+				species = event_target:hellas_republic_Species
+				flag = {
+					icon = {
+						category = "eqsatwarequus2"
+						file = "LSP_NA.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "uthropiastripe.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_hellas_republic"
+				effect = {
+					set_graphical_culture = "mammalian_01"
+					set_country_flag = the_hellas_republic
+					save_global_event_target_as = the_hellas_republic
+				}
+			}
+			set_owner = event_target:the_hellas_republic
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_hellas_republic"
+			random_country = {
+				limit = { has_country_flag = the_hellas_republic }
+				save_global_event_target_as = the_hellas_republic
+				species = { save_global_event_target_as = hellas_republic_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "scientist"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_hellas_republic"
+					gender = female
+					traits = {
+						trait = "trait_ruler_eye_for_talent"
+					}
+					effect = {
+						save_event_target_as = ruler_hellas_republic
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_hellas_republic"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_hellas_republic"
+				set_female_heir_title = "PRESCRIPTED_heir_title_hellas_republic"
+				set_female_heir_title = "PRESCRIPTED_heir_female_title_hellas_republic"
+				set_leader = event_target:ruler_hellas_republic
+			}
+			set_owner = event_target:the_hellas_republic
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "sol_system_expanded_mars_1000"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_hellas_republic"
+				create_starbase_effect = {
+					COUNTRY = hellas_republic
+				}
+			}
+		}
+	}
+}
+create_cefton_corp = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_cefton_corp }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_cefton_corp }
+			create_species = {
+				name = "PRESCRIPTED_species_name_cefton_corp"
+				class = "ART"
+				portrait = "synth08"
+				homeworld = this
+				namelist = "FUN2"
+				traits = {
+					trait = "trait_thrifty"
+					trait = "trait_ingenious"
+					trait = "trait_communal"
+					trait = "trait_decadent"
+					trait = "trait_unruly"
+					ideal_planet_class = "pc_pd_atoll"
+				}
+				plural = "PRESCRIPTED_species_plural_cefton_corp"
+				adjective = "PRESCRIPTED_species_adjective_cefton_corp"
+				gender = not_set
+				effect = { save_global_event_target_as = cefton_corp_Species }
+			}
+			last_created_species = { save_global_event_target_as = cefton_corp_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_cefton_corp"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_confederation_of_industries"
+					civic = "civic_trading_posts"
+					civic = "civic_corporate_hyperspace_specialty"
+				}
+				origin = "BOO_origin_silk_road"
+				authority = "auth_corporate"
+				name_list = "FUN2"
+				ethos = {
+					ethic = "ethic_egalitarian"
+					ethic = "ethic_fanatic_materialist"
+				}
+				species = event_target:cefton_corp_Species
+				flag = {
+					icon = {
+						category = "ornate"
+						file = "flag_ornate_18.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "flag_BG_48.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_cefton_corp"
+				effect = {
+					set_graphical_culture = "arthropoid_01"
+					set_country_flag = the_cefton_corp
+					save_global_event_target_as = the_cefton_corp
+				}
+			}
+			set_owner = event_target:the_cefton_corp
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_cefton_corp"
+			random_country = {
+				limit = { has_country_flag = the_cefton_corp }
+				save_global_event_target_as = the_cefton_corp
+				species = { save_global_event_target_as = cefton_corp_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_cefton_corp"
+					gender = female
+					traits = {
+						trait = "trait_ruler_logistic_understanding"
+					}
+					effect = {
+						save_event_target_as = ruler_cefton_corp
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_cefton_corp"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_cefton_corp"
+				set_leader = event_target:ruler_cefton_corp
+			}
+			set_owner = event_target:the_cefton_corp
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_cefton_corp"
+				create_starbase_effect = {
+					COUNTRY = cefton_corp
+				}
+			}
+		}
+	}
+}
+create_kaidun_reraak = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_kaidun_reraak }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_kaidun_reraak }
+			create_species = {
+				name = "PRESCRIPTED_species_name_kaidun_reraak"
+				class = "AQUATIC"
+				portrait = "aqu9"
+				homeworld = this
+				namelist = "AQUATIC3"
+				traits = {
+					trait = "trait_aquatic"
+					trait = "trait_strong"
+					trait = "trait_traditional"
+					trait = "trait_sedentary"
+					trait = "trait_solitary"
+					ideal_planet_class = "pc_ocean"
+				}
+				plural = "PRESCRIPTED_species_plural_kaidun_reraak"
+				adjective = "PRESCRIPTED_species_adjective_kaidun_reraak"
+				gender = male
+				effect = { save_global_event_target_as = kaidun_reraak_Species }
+			}
+			last_created_species = { save_global_event_target_as = kaidun_reraak_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_kaidun_reraak"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_warrior_culture"
+					civic = "civic_sovereign_guardianship"
+					civic = "civic_environmentalist"
+				}
+				origin = "origin_ocean_paradise"
+				authority = "auth_imperial"
+				name_list = "AQUATIC3"
+				ethos = {
+					ethic = "ethic_authoritarian"
+					ethic = "ethic_xenophobe"
+					ethic = "ethic_militarist"
+				}
+				species = event_target:kaidun_reraak_Species
+				flag = {
+					icon = {
+						category = "pointy"
+						file = "flag_pointy_2.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "v.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_kaidun_reraak"
+				effect = {
+					set_graphical_culture = "aquatic_01"
+					set_country_flag = the_kaidun_reraak
+					save_global_event_target_as = the_kaidun_reraak
+				}
+			}
+			set_owner = event_target:the_kaidun_reraak
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_kaidun_reraak"
+			random_country = {
+				limit = { has_country_flag = the_kaidun_reraak }
+				save_global_event_target_as = the_kaidun_reraak
+				species = { save_global_event_target_as = kaidun_reraak_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "commander"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_kaidun_reraak"
+					gender = male
+					traits = {
+						trait = "trait_ruler_warlike"
+					}
+					effect = {
+						save_event_target_as = ruler_kaidun_reraak
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_kaidun_reraak"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_kaidun_reraak"
+				set_female_heir_title = "PRESCRIPTED_heir_title_kaidun_reraak"
+				set_leader = event_target:ruler_kaidun_reraak
+			}
+			set_owner = event_target:the_kaidun_reraak
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "Kaidun_Reraak_homeworld"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_kaidun_reraak"
+				create_starbase_effect = {
+					COUNTRY = kaidun_reraak
+				}
+			}
+		}
+	}
+}
+create_laevo_systems = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_laevo_systems }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_laevo_systems }
+			create_species = {
+				name = "PRESCRIPTED_species_name_laevo_systems"
+				class = "FUN"
+				portrait = "cyb13"
+				homeworld = this
+				namelist = "FUN2"
+				traits = {
+					trait = "trait_intelligent"
+					trait = "trait_venerable"
+					trait = "trait_nonadaptive"
+					trait = "trait_slow_breeders"
+					ideal_planet_class = "pc_pd_cold_tidally_locked"
+				}
+				plural = "PRESCRIPTED_species_plural_laevo_systems"
+				adjective = "PRESCRIPTED_species_adjective_laevo_systems"
+				gender = not_set
+				effect = { save_global_event_target_as = laevo_systems_Species }
+			}
+			last_created_species = { save_global_event_target_as = laevo_systems_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_laevo_systems"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_ascensionists"
+					civic = "civic_inwards_perfection"
+					civic = "civic_virtual_society"
+				}
+				origin = "origin_cybernetic_creed"
+				authority = "auth_democratic"
+				name_list = "FUN2"
+				ethos = {
+					ethic = "ethic_xenophobe"
+					ethic = "ethic_pacifist"
+					ethic = "ethic_spiritualist"
+				}
+				species = event_target:laevo_systems_Species
+				flag = {
+					icon = {
+						category = "corporate"
+						file = "corporate_06.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_laevo_systems"
+				effect = {
+					set_graphical_culture = "synthetics_01"
+					set_country_flag = the_laevo_systems
+					save_global_event_target_as = the_laevo_systems
+				}
+			}
+			set_owner = event_target:the_laevo_systems
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_laevo_systems"
+			random_country = {
+				limit = { has_country_flag = the_laevo_systems }
+				save_global_event_target_as = the_laevo_systems
+				species = { save_global_event_target_as = laevo_systems_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_laevo_systems"
+					gender = female
+					traits = {
+						trait = null
+					}
+					effect = {
+						save_event_target_as = ruler_laevo_systems
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_laevo_systems"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_laevo_systems"
+				set_leader = event_target:ruler_laevo_systems
+			}
+			set_owner = event_target:the_laevo_systems
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_laevo_systems"
+				create_starbase_effect = {
+					COUNTRY = laevo_systems
+				}
+			}
+		}
+	}
+}
+create_demeda_confederacy = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_demeda_confederacy }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_demeda_confederacy }
+			create_species = {
+				name = "PRESCRIPTED_species_name_demeda_confederacy"
+				class = "MOL"
+				portrait = "synth05"
+				homeworld = this
+				namelist = "MOL4"
+				traits = {
+					trait = "trait_ingenious"
+					trait = "trait_natural_engineers"
+					trait = "trait_noxious"
+					trait = "trait_quarrelsome"
+					trait = "trait_wasteful"
+					ideal_planet_class = "pc_pd_cenote"
+				}
+				plural = "PRESCRIPTED_species_plural_demeda_confederacy"
+				adjective = "PRESCRIPTED_species_adjective_demeda_confederacy"
+				gender = not_set
+				effect = { save_global_event_target_as = demeda_confederacy_Species }
+			}
+			last_created_species = { save_global_event_target_as = demeda_confederacy_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_demeda_confederacy"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "eco_civic_ecumenopolis"
+					civic = "lrsk_gov_var_civic_colonial_fiefs"
+					civic = "civic_defensive_policies"
+				}
+				origin = "originsextended_crowded"
+				authority = "auth_imperial"
+				name_list = "MOL4"
+				ethos = {
+					ethic = "ethic_authoritarian"
+					ethic = "ethic_xenophobe"
+					ethic = "ethic_pacifist"
+				}
+				species = event_target:demeda_confederacy_Species
+				flag = {
+					icon = {
+						category = "e4re_020"
+						file = "abstract-119.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "flag_BG_1.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_demeda_confederacy"
+				effect = {
+					set_graphical_culture = "molluscoid_01"
+					set_country_flag = the_demeda_confederacy
+					save_global_event_target_as = the_demeda_confederacy
+				}
+			}
+			set_owner = event_target:the_demeda_confederacy
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_demeda_confederacy"
+			random_country = {
+				limit = { has_country_flag = the_demeda_confederacy }
+				save_global_event_target_as = the_demeda_confederacy
+				species = { save_global_event_target_as = demeda_confederacy_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_demeda_confederacy"
+					gender = female
+					traits = {
+						trait = "trait_ruler_logistic_understanding"
+					}
+					effect = {
+						save_event_target_as = ruler_demeda_confederacy
+					}
+				}
+				set_leader = event_target:ruler_demeda_confederacy
+			}
+			set_owner = event_target:the_demeda_confederacy
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_demeda_confederacy"
+				create_starbase_effect = {
+					COUNTRY = demeda_confederacy
+				}
+			}
+		}
+	}
+}
+create_galactic_free_state = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_galactic_free_state }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_galactic_free_state }
+			create_species = {
+				name = "PRESCRIPTED_species_name_galactic_free_state"
+				class = "MACHINE"
+				portrait = "synth_machine_01"
+				homeworld = this
+				namelist = "MACHINE_AGE2"
+				traits = {
+					trait = "trait_machine_unit"
+					trait = "trait_robot_loyalty_circuits"
+					trait = "trait_robot_custom_made"
+					trait = "trait_robot_high_bandwidth"
+					ideal_planet_class = "pc_pd_mediterranean"
+				}
+				plural = "PRESCRIPTED_species_plural_galactic_free_state"
+				adjective = "PRESCRIPTED_species_adjective_galactic_free_state"
+				gender = indeterminable
+				effect = { save_global_event_target_as = galactic_free_state_Species }
+			}
+			last_created_species = { save_global_event_target_as = galactic_free_state_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_galactic_free_state"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "lrsk_gov_var_civic_mc_controlling_interest"
+					civic = "civic_trading_posts"
+					civic = "mcp_question_space"
+				}
+				origin = "origin_common_ground"
+				authority = "auth_corporate"
+				name_list = "MACHINE_AGE2"
+				ethos = {
+					ethic = "ethic_fanatic_xenophile"
+					ethic = "ethic_pacifist"
+				}
+				species = event_target:galactic_free_state_Species
+				flag = {
+					icon = {
+						category = "eqsatwarzebra5"
+						file = "YAN.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "arstotzka.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_galactic_free_state"
+				effect = {
+					set_graphical_culture = "cybernetics_01"
+					set_country_flag = the_galactic_free_state
+					save_global_event_target_as = the_galactic_free_state
+				}
+			}
+			set_owner = event_target:the_galactic_free_state
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_galactic_free_state"
+			random_country = {
+				limit = { has_country_flag = the_galactic_free_state }
+				save_global_event_target_as = the_galactic_free_state
+				species = { save_global_event_target_as = galactic_free_state_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_galactic_free_state"
+					gender = indeterminable
+					traits = {
+						trait = null
+					}
+					effect = {
+						save_event_target_as = ruler_galactic_free_state
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_galactic_free_state"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_galactic_free_state"
+				set_leader = event_target:ruler_galactic_free_state
+			}
+			set_owner = event_target:the_galactic_free_state
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "mhs_me_parnitha_system"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_galactic_free_state"
+				create_starbase_effect = {
+					COUNTRY = galactic_free_state
+				}
+			}
+		}
+	}
+}
+create_kratzi_industries = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_kratzi_industries }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_kratzi_industries }
+			create_species = {
+				name = "PRESCRIPTED_species_name_kratzi_industries"
+				class = "MAM"
+				portrait = "cyb1"
+				homeworld = this
+				namelist = "REP3"
+				traits = {
+					trait = "trait_charismatic"
+					trait = "trait_thrifty"
+					trait = "trait_natural_sociologists"
+					trait = "trait_decadent"
+					trait = "trait_nonadaptive"
+					ideal_planet_class = "pc_pd_geothermal"
+				}
+				plural = "PRESCRIPTED_species_plural_kratzi_industries"
+				adjective = "PRESCRIPTED_species_adjective_kratzi_industries"
+				gender = not_set
+				effect = { save_global_event_target_as = kratzi_industries_Species }
+			}
+			last_created_species = { save_global_event_target_as = kratzi_industries_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_kratzi_industries"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "mcp_technocorp"
+					civic = "civic_constant_growth"
+					civic = "civic_construction_company"
+				}
+				origin = "origin_elysium"
+				authority = "auth_corporate"
+				name_list = "REP3"
+				ethos = {
+					ethic = "ethic_authoritarian"
+					ethic = "ethic_fanatic_materialist"
+				}
+				species = event_target:kratzi_industries_Species
+				flag = {
+					icon = {
+						category = "corporate"
+						file = "corporate_9301.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "flag_BG_31.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_hazbuzan"
+				effect = {
+					set_graphical_culture = "avian_01"
+					set_country_flag = the_kratzi_industries
+					save_global_event_target_as = the_kratzi_industries
+				}
+			}
+			set_owner = event_target:the_kratzi_industries
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_kratzi_industries"
+			random_country = {
+				limit = { has_country_flag = the_kratzi_industries }
+				save_global_event_target_as = the_kratzi_industries
+				species = { save_global_event_target_as = kratzi_industries_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_kratzi_industries"
+					gender = female
+					traits = {
+						trait = "trait_ruler_charismatic"
+					}
+					effect = {
+						save_event_target_as = ruler_kratzi_industries
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_kratzi_industries"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_kratzi_industries"
+				set_leader = event_target:ruler_kratzi_industries
+			}
+			set_owner = event_target:the_kratzi_industries
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_kratzi_industries"
+				create_starbase_effect = {
+					COUNTRY = kratzi_industries
+				}
+			}
+		}
+	}
+}
+create_human_republic = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_human_republic }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_human_republic }
+			create_species = {
+				name = "PRESCRIPTED_species_name_human_republic"
+				class = "HUM"
+				portrait = "human"
+				homeworld = this
+				namelist = "HUMAN1"
+				traits = {
+					trait = "trait_adaptive"
+					trait = "trait_nomadic"
+					trait = "trait_mzilli_distant_origin_sol"
+					trait = "trait_decadent"
+					ideal_planet_class = "pc_pd_retinal"
+				}
+				plural = "PRESCRIPTED_species_plural_human_republic"
+				adjective = "PRESCRIPTED_species_adjective_human_republic"
+				gender = not_set
+				effect = { save_global_event_target_as = human_republic_Species }
+			}
+			last_created_species = { save_global_event_target_as = human_republic_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_human_republic"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_aristocratic_elite"
+					civic = "lrsk_gov_var_civic_enlightened_liberalism"
+					civic = "civic_id_advanced"
+				}
+				origin = "origin_mom_exiles"
+				authority = "auth_oligarchic"
+				name_list = "HUMAN1"
+				ethos = {
+					ethic = "ethic_militarist"
+					ethic = "ethic_fanatic_materialist"
+				}
+				species = event_target:human_republic_Species
+				flag = {
+					icon = {
+						category = "IBS_flag_space"
+						file = "z_flag_space_24.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "flag_BG_51.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_human_republic"
+				effect = {
+					set_graphical_culture = "c_plantoid_02"
+					set_country_flag = the_human_republic
+					save_global_event_target_as = the_human_republic
+				}
+			}
+			set_owner = event_target:the_human_republic
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_human_republic"
+			random_country = {
+				limit = { has_country_flag = the_human_republic }
+				save_global_event_target_as = the_human_republic
+				species = { save_global_event_target_as = human_republic_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "official"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_human_republic"
+					gender = female
+					traits = {
+						trait = "trait_ruler_logistic_understanding"
+					}
+					effect = {
+						save_event_target_as = ruler_human_republic
+					}
+				}
+				set_male_ruler_title = "PRESCRIPTED_ruler_title_human_republic"
+				set_female_ruler_title = "PRESCRIPTED_ruler_female_title_human_republic"
+				set_leader = event_target:ruler_human_republic
+			}
+			set_owner = event_target:the_human_republic
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = "custom_starting_init_05"
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_human_republic"
+				create_starbase_effect = {
+					COUNTRY = human_republic
+				}
+			}
+		}
+	}
+}
+create_rahnkadir_empire = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_rahnkadir_empire }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_rahnkadir_empire }
+			create_species = {
+				name = "PRESCRIPTED_species_name_rahnkadir_empire"
+				class = "FUN"
+				portrait = "fun15"
+				homeworld = this
+				namelist = "MOL3"
+				traits = {
+					trait = "trait_latent_psionic"
+					trait = "trait_storm_touched"
+					trait = "trait_traditional"
+					trait = "trait_conformists"
+					trait = "trait_repugnant"
+					ideal_planet_class = "pc_pd_fog_desert"
+				}
+				plural = "PRESCRIPTED_species_plural_rahnkadir_empire"
+				adjective = "PRESCRIPTED_species_adjective_rahnkadir_empire"
+				gender = indeterminable
+				effect = { save_global_event_target_as = rahnkadir_empire_Species }
+			}
+			last_created_species = { save_global_event_target_as = rahnkadir_empire_Species }
+			create_country = {
+				name = "PRESCRIPTED_name_rahnkadir_empire"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					civic = "civic_dimensional_worship"
+					civic = "civic_storm_callers"
+					civic = "civic_antique_purveyors_ancrel"
+				}
+				origin = "origin_shroudwalker_apprentice"
+				authority = "auth_imperial"
+				name_list = "MOL3"
+				ethos = {
+					ethic = "ethic_authoritarian"
+					ethic = "ethic_xenophobe"
+					ethic = "ethic_spiritualist"
+				}
+				species = event_target:rahnkadir_empire_Species
+				flag = {
+					icon = {
+						category = "blocky"
+						file = "flag_blocky_8.dds"
+					}
+					background = {
+						category = "backgrounds"
+						file = "twins_octogone.dds"
+					}
+					colors = {
+						null
+						null
+						null
+						null
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_rahnkadir_empire"
+				effect = {
+					set_graphical_culture = "molluscoid_01"
+					set_country_flag = the_rahnkadir_empire
+					save_global_event_target_as = the_rahnkadir_empire
+				}
+			}
+			set_owner = event_target:the_rahnkadir_empire
+			set_capital = yes
+			set_name = "PRESCRIPTED_planet_name_rahnkadir_empire"
+			random_country = {
+				limit = { has_country_flag = the_rahnkadir_empire }
+				save_global_event_target_as = the_rahnkadir_empire
+				species = { save_global_event_target_as = rahnkadir_empire_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				country_event = { id = game_start.8 days = 0 }
+				country_event = { id = game_start.9 days = 0 }
+				give_starting_resources_effect = yes
+				create_leader = {
+					class = "commander"
+					species = owner_main_species
+					name = "PRESCRIPTED_ruler_name_rahnkadir_empire"
+					gender = indeterminable
+					traits = {
+						trait = "trait_ruler_warlike"
+					}
+					effect = {
+						save_event_target_as = ruler_rahnkadir_empire
+					}
+				}
+				set_leader = event_target:ruler_rahnkadir_empire
+			}
+			set_owner = event_target:the_rahnkadir_empire
+			generate_starting_pops = { pops_species_1 = 24 }
+			planet_event = { id = game_start.12 days = 0 }
+			# initializer = ""
+			solar_system = {
+				set_name = "PRESCRIPTED_system_name_rahnkadir_empire"
+				create_starbase_effect = {
+					COUNTRY = rahnkadir_empire
+				}
+			}
+		}
+	}
+}
