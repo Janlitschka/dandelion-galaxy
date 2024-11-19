@@ -1,3 +1,7 @@
 NGameplay = {
 	GOVERNMENT_CIVIC_POINTS_BASE		= 3
 }
+NGraphics = {
+	RANDOM_HEIGHT_MIN = -10.0
+	RANDOM_HEIGHT_MAX = 10.0
+}

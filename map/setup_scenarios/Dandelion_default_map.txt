@@ -528,7 +528,8 @@ static_galaxy_scenario = {
 	add_hyperlane = { from = "692" to = "54" }
 	system = { id = "230" name = "230" position = { x = -256 y = -43 } }
 	add_hyperlane = { from = "230" to = "587" }
-	add_hyperlane = { from = "230" to = "" }
+	add_hyperlane = { from = "230" to = "373" }
+	add_hyperlane = { from = "230" to = "654" }
 	system = { id = "654" name = "654" position = { x = -261 y = -32 } }
 	add_hyperlane = { from = "654" to = "230" }
 	add_hyperlane = { from = "654" to = "489" }
