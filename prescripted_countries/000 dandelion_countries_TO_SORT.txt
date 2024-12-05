@@ -1682,7 +1682,373 @@ ralis_sanctuary = {
 		ruler_title="PRESCRIPTED_ruler_title_ralis_sanctuary"
 		heir_title="PRESCRIPTED_heir_title_ralis_sanctuary"
 		ruler_title_female="PRESCRIPTED_ruler_female_title_ralis_sanctuary"
-		# trait="trait_ruler_warlike" TODO: ralis sanctuary leadder trait
+		leader_class="official"
+	}
+}
+andro_union = {
+	name = "PRESCRIPTED_name_andro_union"
+	adjective = "PRESCRIPTED_adjective_andro_union"
+	ship_prefix = "PRESCRIPTED_ship_prefix_andro_union"
+
+	default = yes
+
+	species={
+		class="MAM"
+		portrait="cyb3"
+		name = "PRESCRIPTED_species_name_andro_union"
+		plural = "PRESCRIPTED_species_plural_andro_union"
+		adjective = "PRESCRIPTED_species_adjective_andro_union"
+		name_list="PLANT4"
+		gender=female
+		trait="trait_nomadic"
+		trait="trait_natural_engineers"
+		trait="trait_enduring"
+		trait="trait_wasteful"
+	}
+
+	ethic="ethic_egalitarian"
+	ethic="ethic_fanatic_materialist"
+	civics={
+		"civic_heroic_tales"
+		"civic_technocracy"
+		"civic_center_of_trade"
+	}
+	authority="auth_democratic"
+	government="gov_rational_consensus"
+	advisor_voice_type="l_the_technocrat"
+	origin = "origin_mechanists"
+	initializer=""
+	flags = { the_andro_union }
+
+	planet_name = "PRESCRIPTED_planet_name_andro_union"
+	system_name = "PRESCRIPTED_system_name_andro_union"
+	planet_class = "pc_pd_ironsand"
+	graphical_culture="avian_01"
+	city_graphical_culture="reptilian_01"
+
+	spawn_as_fallen=no
+	ignore_portrait_duplication=yes
+	room="des2_room"
+	spawn_enabled=always
+	empire_flag={
+		icon={
+			category="corporate"
+			file="corporate_9305.dds"
+		}
+		background={
+			category="backgrounds"
+			file="twins_shade_horizon alt.dds"
+		}
+		colors={
+			"green"
+			"black"
+			"black"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_andro_union"
+		portrait="cyb3_f"
+		texture=3
+		evolution_mask=0
+		attachment=0
+		clothes=4
+		ruler_title_female="PRESCRIPTED_ruler_female_title_andro_union"
+		leader_class="scientist"
+		trait="trait_ruler_logistic_understanding"
+	}
+}
+quartali = {
+	name = "PRESCRIPTED_name_quartali"
+	adjective = "PRESCRIPTED_adjective_quartali"
+	ship_prefix = "PRESCRIPTED_ship_prefix_quartali"
+
+	default = yes
+
+	species={
+		class="MAM"
+		portrait="cyb2"
+		name = "PRESCRIPTED_species_name_quartali"
+		plural = "PRESCRIPTED_species_plural_quartali"
+		adjective = "PRESCRIPTED_species_adjective_quartali"
+		name_list="MAM3"
+		gender=not_set
+		trait="trait_venerable"
+		trait="trait_conformists"
+		trait="trait_SAT_late_bloomers"
+		trait="trait_craven"
+	}
+
+	ethic="ethic_egalitarian"
+	ethic="ethic_xenophile"
+	ethic="ethic_spiritualist"
+	civics={
+		"civic_oligarchic_senate"
+		"lrsk_gov_var_civic_republicanism"
+		"civic_superstitious"
+	}
+	authority="auth_oligarchic"
+	government="lrsk_gvp_gov_pious_republic"
+	advisor_voice_type="l_cybernetic_vir"
+	origin = "origin_default"
+	initializer=""
+	flags = { the_quartali }
+
+	planet_name = "PRESCRIPTED_planet_name_quartali"
+	system_name = "PRESCRIPTED_system_name_quartali"
+	planet_class = "pc_pd_cold_tidally_locked"
+	graphical_culture="fungoid_01"
+	city_graphical_culture="mammalian_01"
+
+	spawn_as_fallen=no
+	ignore_portrait_duplication=yes
+	room="city20_room"
+	spawn_enabled=always
+	empire_flag={
+		icon={
+			category="corporate"
+			file="corporate_02.dds"
+		}
+		background={
+			category="backgrounds"
+			file="twins_hex alt.dds"
+		}
+		colors={
+			"burgundy"
+			"red"
+			"dark_teal"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_quartali"
+		portrait="cyb2_f"
+		texture=2
+		evolution_mask=0
+		attachment=0
+		clothes=0
+		ruler_title="PRESCRIPTED_ruler_title_quartali"
+		ruler_title_female="PRESCRIPTED_ruler_female_title_quartali"
+		trait="leader_trait_principled"
+		leader_class="official"
+	}
+}
+vomuri = {
+	name = "PRESCRIPTED_name_vomuri"
+	adjective = "PRESCRIPTED_adjective_vomuri"
+	ship_prefix = "PRESCRIPTED_ship_prefix_vomuri"
+
+	default = yes
+
+	species={
+		class="NECROID"
+		portrait="nec8"
+		name = "PRESCRIPTED_species_name_vomuri"
+		plural = "PRESCRIPTED_species_plural_vomuri"
+		adjective = "PRESCRIPTED_species_adjective_vomuri"
+		name_list="MACHINE_AGE3"
+		gender=not_set
+		trait="trait_immortality"
+		trait="trait_conservational"
+		trait="trait_SAT_intimidating"
+		trait="trait_rooted"
+	}
+
+	ethic="ethic_fanatic_materialist"
+	civics={}
+	authority="auth_oligarchic"
+	government="gov_executive_committee"
+	advisor_voice_type="l_necroid_vir"
+	origin = "origin_default"
+	initializer=""
+	flags = { the_vomuri }
+
+	planet_name = "PRESCRIPTED_planet_name_vomuri"
+	system_name = "PRESCRIPTED_system_name_vomuri"
+	planet_class = "pc_continental"
+	graphical_culture="humanoid_01"
+	city_graphical_culture="mammalian_01"
+
+	spawn_as_fallen=yes
+	ignore_portrait_duplication=yes
+	room="CITY34_room"
+	spawn_enabled=always
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_5.dds"
+		}
+		background={
+			category="backgrounds"
+			file="twins_trash1 alt.dds"
+		}
+		colors={
+			"black"
+			"dark_grey"
+			"orange"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_vomuri"
+		portrait="nec8"
+		texture=2
+		evolution_mask=0
+		attachment=0
+		clothes=0
+		ruler_title="PRESCRIPTED_ruler_title_vomuri"
+		heir_title="PRESCRIPTED_heir_title_vomuri"
+		ruler_title_female="PRESCRIPTED_ruler_female_title_vomuri"
+		trait="trait_ruler_logistic_understanding"
+		leader_class="official"
+	}
+}
+itapon = {
+	name = "PRESCRIPTED_name_itapon"
+	adjective = "PRESCRIPTED_adjective_itapon"
+	ship_prefix = "PRESCRIPTED_ship_prefix_itapon"
+
+	default = yes
+
+	species={
+		class="MOL"
+		portrait="mol2"
+		name = "PRESCRIPTED_species_name_itapon"
+		plural = "PRESCRIPTED_species_plural_itapon"
+		adjective = "PRESCRIPTED_species_adjective_itapon"
+		name_list="TOX3"
+		gender=not_set
+		trait="trait_immortality"
+		trait="trait_conservational"
+		trait="trait_SAT_intimidating"
+		trait="trait_rooted"
+	}
+
+	ethic="ethic_fanatic_xenophobe"
+	civics={}
+	authority="auth_imperial"
+	government="gov_despotic_empire"
+	advisor_voice_type="l_hivemind"
+	origin = "origin_default"
+	initializer="originsextended_starless_system"
+	flags = { the_itapon }
+
+	planet_name = "PRESCRIPTED_planet_name_itapon"
+	system_name = "PRESCRIPTED_system_name_itapon"
+	planet_class = "pc_continental"
+	graphical_culture="humanoid_01"
+	city_graphical_culture="mammalian_01"
+
+	spawn_as_fallen=yes
+	ignore_portrait_duplication=yes
+	room="palast10_room"
+	spawn_enabled=always
+	empire_flag={
+		icon={
+			category="ornate"
+			file="flag_ornate_14.dds"
+		}
+		background={
+			category="backgrounds"
+			file="soleilltwins_trash1evant alt.dds"
+		}
+		colors={
+			"light_grey"
+			"medium_steel"
+			"orange"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_itapon"
+		portrait="mol2"
+		texture=0
+		evolution_mask=0
+		attachment=0
+		clothes=0
+		ruler_title="PRESCRIPTED_ruler_title_itapon"
+		heir_title="PRESCRIPTED_heir_title_itapon"
+		ruler_title_female="PRESCRIPTED_ruler_female_title_itapon"
+		trait="trait_ruler_charismatic"
+		leader_class="official"
+	}
+}
+alliance_five = {
+	name = "PRESCRIPTED_name_alliance_five"
+	adjective = "PRESCRIPTED_adjective_alliance_five"
+	ship_prefix = "PRESCRIPTED_ship_prefix_alliance_five"
+
+	default = yes
+
+	species={
+		class="PLANT"
+		portrait="pla3"
+		name = "PRESCRIPTED_species_name_alliance_five"
+		plural = "PRESCRIPTED_species_plural_alliance_five"
+		adjective = "PRESCRIPTED_species_adjective_alliance_five"
+		name_list="FUN4"
+		gender=indeterminable
+		trait="trait_agrarian"
+		trait="trait_natural_engineers"
+		trait="trait_docile"
+		trait="trait_craven"
+	}
+
+	ethic="ethic_fanatic_egalitarian"
+	ethic="ethic_pacifist"
+	civics={
+		"civic_shared_burden"
+		"civic_nonverbal_communication"
+		"civic_idyllic_bloom"
+	}
+	authority="auth_democratic"
+	government="gov_communal_parity"
+	origin = "origin_gatekeepers"
+	initializer="gatekeepers_system_initializer"
+	flags = { the_alliance_five }
+
+	planet_name = "PRESCRIPTED_planet_name_alliance_five"
+	system_name = "PRESCRIPTED_system_name_alliance_five"
+	planet_class = "pc_continental"
+	graphical_culture="fungoid_01"
+	city_graphical_culture="mammalian_01"
+
+	spawn_as_fallen=no
+	ignore_portrait_duplication=yes
+	room="cyb16_room"
+	spawn_enabled=always
+	empire_flag={
+		icon={
+			category="ornate"
+			file="flag_ornate_3.dds"
+		}
+		background={
+			category="backgrounds"
+			file="twins_sun.dds"
+		}
+		colors={
+			"shadow_green"
+			"green"
+			"black"
+			"null"
+		}
+	}
+	ruler={
+		gender=indeterminable
+		name="PRESCRIPTED_ruler_name_alliance_five"
+		portrait="pla3"
+		texture=2
+		evolution_mask=0
+		attachment=0
+		clothes=0
+		ruler_title="PRESCRIPTED_ruler_title_alliance_five"
+		heir_title="PRESCRIPTED_heir_title_alliance_five"
+		ruler_title_female="PRESCRIPTED_ruler_female_title_alliance_five"
+		trait="leader_trait_spycraft"
 		leader_class="official"
 	}
 }
