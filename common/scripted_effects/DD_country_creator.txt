@@ -2874,3 +2874,238 @@ create_rahnkadir_empire = {
 		}
 	}
 }
+create_quartali = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_quartali }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_quartali }
+			create_species = {
+				name = "PRESCRIPTED_species_name_quartali"
+				class = "MAM"
+				portrait = "cyb2"
+				homeworld = this
+				namelist = "MAM3"
+				traits = {
+					trait="trait_venerable"
+					trait="trait_conformists"
+					trait="trait_SAT_late_bloomers"
+					trait="trait_craven"
+					ideal_planet_class = "pc_pd_cold_tidally_locked"
+				}
+				effect = { save_global_event_target_as = quartali_Species }
+			}
+			last_created_species = { save_global_event_target_as = quartali_Species }
+			create_country = {
+				name = "PRESCRIPTED_species_name_quartali"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					"civic_oligarchic_senate"
+					"lrsk_gov_var_civic_republicanism"
+					"civic_superstitious"
+				}
+				origin = "origin_default"
+				authority = "auth_oligarchic"
+				name_list="MAM3"
+				ethos = {
+					ethic="ethic_egalitarian"
+					ethic="ethic_xenophile"
+					ethic="ethic_spiritualist"
+				}
+				species = event_target:quartali_Species
+				flag = {
+					icon={
+						category="corporate"
+						file="corporate_02.dds"
+					}
+					background={
+						category="backgrounds"
+						file="twins_hex alt.dds"
+					}
+					colors={
+						"burgundy"
+						"red"
+						"dark_teal"
+						"null"
+					}
+				}
+				ship_prefix="PRESCRIPTED_ship_prefix_quartali"
+				effect = {
+					set_graphical_culture="fungoid_01"
+					set_country_flag = the_quartali
+					save_global_event_target_as = the_quartali
+				}
+			}
+			set_owner = event_target:the_quartali
+			set_capital = yes
+			set_name = "PRESCRIPTED_species_name_quartali"
+			random_country = {
+				limit = { has_country_flag = the_quartali }
+				save_global_event_target_as = the_quartali
+				species = { save_global_event_target_as = quartali_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				# start add
+			}
+			set_owner = event_target:the_quartali
+			generate_starting_pops = { pops_species_1 = 24 }
+		}
+	}
+}
+create_andro_union = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_andro_union }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_andro_union }
+			create_species = {
+				name = "PRESCRIPTED_species_name_andro_union"
+				class = "MAM"
+				portrait = "cyb3"
+				homeworld = this
+				namelist = "PLANT4"
+				traits = {
+					trait="trait_nomadic"
+					trait="trait_natural_engineers"
+					trait="trait_enduring"
+					trait="trait_wasteful"
+					ideal_planet_class = "pc_pd_ironsand"
+				}
+				effect = { save_global_event_target_as = andro_union_Species }
+			}
+			last_created_species = { save_global_event_target_as = andro_union_Species }
+			create_country = {
+				name = "PRESCRIPTED_species_name_andro_union"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					"civic_heroic_tales"
+					"civic_technocracy"
+					"civic_center_of_trade"
+				}
+				origin = "origin_mechanists"
+				authority="auth_democratic"
+				name_list="PLANT4"
+				ethos = {
+					ethic="ethic_egalitarian"
+					ethic="ethic_fanatic_materialist"
+				}
+				species = event_target:andro_union_Species
+				flag = {
+					icon={
+						category="corporate"
+						file="corporate_9305.dds"
+					}
+					background={
+						category="backgrounds"
+						file="twins_shade_horizon alt.dds"
+					}
+					colors={
+						"green"
+						"black"
+						"black"
+						"null"
+					}
+				}
+				ship_prefix="PRESCRIPTED_ship_prefix_andro_union"
+				effect = {
+					set_graphical_culture="avian_01"
+					set_country_flag = the_andro_union
+					save_global_event_target_as = the_andro_union
+				}
+			}
+			set_owner = event_target:the_andro_union
+			set_capital = yes
+			set_name = "PRESCRIPTED_species_name_andro_union"
+			random_country = {
+				limit = { has_country_flag = the_andro_union }
+				save_global_event_target_as = the_andro_union
+				species = { save_global_event_target_as = andro_union_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				# start add
+			}
+			set_owner = event_target:the_andro_union
+			generate_starting_pops = { pops_species_1 = 24 }
+		}
+	}
+}
+create_alliance_five = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_alliance_five }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_alliance_five }
+			create_species = {
+				name = "PRESCRIPTED_species_name_alliance_five"
+				class = "PLANT"
+				portrait = "pla3"
+				homeworld = this
+				namelist = "FUN4"
+				traits = {
+					trait="trait_agrarian"
+					trait="trait_natural_engineers"
+					trait="trait_docile"
+					trait="trait_craven"
+					ideal_planet_class = "pc_continental"
+				}
+				effect = { save_global_event_target_as = alliance_five_Species }
+			}
+			last_created_species = { save_global_event_target_as = alliance_five_Species }
+			create_country = {
+				name = "PRESCRIPTED_species_name_alliance_five"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					"civic_shared_burden"
+					"civic_nonverbal_communication"
+					"civic_idyllic_bloom"
+				}
+				origin = "origin_gatekeepers"
+				authority="auth_democratic"
+				name_list="FUN4"
+				ethos = {
+					ethic="ethic_fanatic_egalitarian"
+					ethic="ethic_pacifist"
+				}
+				species = event_target:alliance_five_Species
+				flag = {
+					icon={
+						category="ornate"
+						file="flag_ornate_3.dds"
+					}
+					background={
+						category="backgrounds"
+						file="twins_sun.dds"
+					}
+					colors={
+						"shadow_green"
+						"green"
+						"black"
+						"null"
+					}
+				}
+				ship_prefix="PRESCRIPTED_ship_prefix_alliance_five"
+				effect = {
+					set_graphical_culture="fungoid_01"
+					set_country_flag = the_alliance_five
+					save_global_event_target_as = the_alliance_five
+				}
+			}
+			set_owner = event_target:the_alliance_five
+			set_capital = yes
+			set_name = "PRESCRIPTED_species_name_alliance_five"
+			random_country = {
+				limit = { has_country_flag = the_alliance_five }
+				save_global_event_target_as = the_alliance_five
+				species = { save_global_event_target_as = alliance_five_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				# start add
+			}
+			set_owner = event_target:the_alliance_five
+			generate_starting_pops = { pops_species_1 = 24 }
+		}
+	}
+}

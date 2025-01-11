@@ -1,0 +1,150 @@
+create_vomuri = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_vomuri }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_vomuri }
+			create_species = {
+				name = "PRESCRIPTED_species_name_vomuri"
+				class = "NECROID"
+				portrait = "nec8"
+				homeworld = this
+				namelist = "MACHINE_AGE3"
+				traits = {
+					trait="trait_immortality"
+					trait="trait_conservational"
+					trait="trait_SAT_intimidating"
+					trait="trait_rooted"
+					ideal_planet_class = "pc_continental"
+				}
+				effect = { save_global_event_target_as = vomuri_Species }
+			}
+			last_created_species = { save_global_event_target_as = vomuri_Species }
+			create_country = {
+				name = "PRESCRIPTED_species_name_vomuri"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+					
+				}
+				origin = "origin_default"
+				authority = "auth_oligarchic"
+				name_list = "MACHINE_AGE3"
+				ethos = {
+					ethic="ethic_fanatic_materialist"
+				}
+				species = event_target:vomuri_Species
+				flag = {
+					icon={
+						category="domination"
+						file="domination_5.dds"
+					}
+					background={
+						category="backgrounds"
+						file="twins_trash1 alt.dds"
+					}
+					colors={
+						"black"
+						"dark_grey"
+						"orange"
+						"null"
+					}
+				}
+				ship_prefix = "PRESCRIPTED_ship_prefix_vomuri"
+				effect = {
+					set_graphical_culture="humanoid_01"
+					set_country_flag = the_vomuri
+					save_global_event_target_as = the_vomuri
+				}
+			}
+			set_owner = event_target:the_vomuri
+			set_capital = yes
+			set_name = "PRESCRIPTED_species_name_vomuri"
+			random_country = {
+				limit = { has_country_flag = the_vomuri }
+				save_global_event_target_as = the_vomuri
+				species = { save_global_event_target_as = vomuri_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				# start add
+			}
+			set_owner = event_target:the_vomuri
+			generate_starting_pops = { pops_species_1 = 24 }
+		}
+	}
+}
+create_itapon = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:the_itapon }
+		}
+		random_galaxy_planet = {
+			limit = { has_planet_flag = homeworld_itapon }
+			create_species = {
+				name = "PRESCRIPTED_species_name_itapon"
+				class = "MOL"
+				portrait = "mol2"
+				homeworld = this
+				namelist = "TOX3"
+				traits = {
+					trait="trait_immortality"
+					trait="trait_conservational"
+					trait="trait_SAT_intimidating"
+					trait="trait_rooted"
+					ideal_planet_class = "pc_continental"
+				}
+				effect = { save_global_event_target_as = itapon_Species }
+			}
+			last_created_species = { save_global_event_target_as = itapon_Species }
+			create_country = {
+				name = "PRESCRIPTED_species_name_itapon"
+				type = default
+				ignore_initial_colony_error = yes
+				civics = {
+
+				}
+				origin = "origin_default"
+				authority = "auth_imperial"
+				name_list="TOX3"
+				ethos = {
+					ethic="ethic_fanatic_xenophobe"
+				}
+				species = event_target:itapon_Species
+				flag = {
+					icon={
+						category="ornate"
+						file="flag_ornate_14.dds"
+					}
+					background={
+						category="backgrounds"
+						file="soleilltwins_trash1evant alt.dds"
+					}
+					colors={
+						"light_grey"
+						"medium_steel"
+						"orange"
+						"null"
+					}
+				}
+				ship_prefix="PRESCRIPTED_ship_prefix_itapon"
+				effect = {
+					set_graphical_culture="humanoid_01"
+					set_country_flag = the_itapon
+					save_global_event_target_as = the_itapon
+				}
+			}
+			set_owner = event_target:the_itapon
+			set_capital = yes
+			set_name = "PRESCRIPTED_species_name_itapon"
+			random_country = {
+				limit = { has_country_flag = the_itapon }
+				save_global_event_target_as = the_itapon
+				species = { save_global_event_target_as = itapon_Species }
+				owner_species = { set_species_homeworld = prevprev }
+				# start add
+			}
+			set_owner = event_target:the_itapon
+			generate_starting_pops = { pops_species_1 = 24 }
+		}
+	}
+}
